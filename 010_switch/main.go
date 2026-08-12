@@ -11,6 +11,16 @@ func main() {
 	switch i {
 	case 1:
 		fmt.Println("One")
+	case 2:
+		fmt.Println("two")
+	case 3:
+		fmt.Println("three")
+	case 4:
+		fmt.Println("four")
+	case 5:
+		fmt.Println("five")
+	default:
+		fmt.Println("other")
 	}
 
 }
