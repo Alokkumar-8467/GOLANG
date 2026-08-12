@@ -20,4 +20,7 @@ func main() {
 		fmt.Println(1)
 	}
 
+	// Classic For Loop
+	
+
 }
