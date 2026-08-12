@@ -15,4 +15,9 @@ func main() {
 
 	// Output : 1 2 3
 
+	// Creating infinite loop
+	for {
+		fmt.Println(1)
+	}
+
 }
