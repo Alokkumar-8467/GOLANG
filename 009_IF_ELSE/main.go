@@ -4,10 +4,22 @@ import "fmt"
 
 func main() {
 
-	age := 28
+	age := 8
 
+	// if Condition
 	if age >= 18 {
 		fmt.Println("Person is an Adult")
+	} else {
+		fmt.Println("Person is not an Adult")
+	}
+
+	// else if condition
+	if age >= 18 {
+		fmt.Println("Person is an Adult")
+	} else if age >= 12 {
+		fmt.Println("Person is not an Teenager")
+	} else {
+		fmt.Println("Person is not an Kid")
 	}
 
 }
