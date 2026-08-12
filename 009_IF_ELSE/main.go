@@ -13,13 +13,15 @@ func main() {
 		fmt.Println("Person is not an Adult")
 	}
 
+	fmt.Println("****************")
+
 	// else if condition
 	if age >= 18 {
 		fmt.Println("Person is an Adult")
 	} else if age >= 12 {
-		fmt.Println("Person is not an Teenager")
+		fmt.Println("Person is Teenager")
 	} else {
-		fmt.Println("Person is not an Kid")
+		fmt.Println("Person is Kid")
 	}
 
 }
