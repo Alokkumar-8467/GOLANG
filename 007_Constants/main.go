@@ -1,5 +1,12 @@
 package main
 
+
+	// Note
+	// We can declare the variable outside the func main() function
+
+	// Ex
+	
+
 func main() {
 
 	// Constants
