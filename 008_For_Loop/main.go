@@ -58,6 +58,7 @@ func main() {
 
 	// New update in GOLANG
 
+	fmt.Println("Range In Loop **************")
 	// Range
 	/*
 		Basically by using range instead for loopp when we want to do some ativity in contunity.
@@ -68,6 +69,10 @@ func main() {
 		Output : 0 1 2 3 4 5 6 7 8 9
 	*/
 
-	
+	for j := range 10 {
+		fmt.Println(j)
+	}
+
+	// Output : 0 1 2 3 4 5 6 7 8 9
 
 }
