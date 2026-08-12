@@ -1,10 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 
 	// When we have too much conditions then we use SWITCH.
+
+	// So Simple Switch
 
 	i := 5
 
@@ -21,6 +26,17 @@ func main() {
 		fmt.Println("five")
 	default:
 		fmt.Println("other")
+	}
+
+	fmt.Println("*****************")
+
+	// Multiple condition Switch
+
+	switch time.Now().Weekday() {
+	case time.Saturday, time.Sunday:
+		fmt.Println("it's weekend")
+	default:
+		fmt.Println("it's workday")
 	}
 
 }
