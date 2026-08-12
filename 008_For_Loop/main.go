@@ -13,14 +13,45 @@ func main() {
 		i = i + 1
 	}
 
+	fmt.Println("***************")
+
 	// Output : 1 2 3
 
 	// Creating infinite loop
-	for {
-		fmt.Println(1)
-	}
+	// for {
+	// 	fmt.Println(1)
+	// }
+
+	fmt.Println("***************")
 
 	// Classic For Loop
-	
+	for i := 0; i < 3; i++ {
+		fmt.Println(i)
+	}
+	// Output we get : 	0	 	1	 	2
+
+	fmt.Println("***************")
+
+	// Now Break in For Loop
+	for i := 0; i < 3; i++ {
+		if i == 2 {
+			break
+		}
+		fmt.Println(i)
+	}
+	// Output we get : 	0 	1
+
+	fmt.Println("***************")
+
+	// Now Continue in For loop
+	for i := 0; i <= 3; i++ {
+		if i == 1 {
+			continue
+		}
+		fmt.Println(i)
+	}
+	// Output we get : 	0 	2 	3
+
+	fmt.Println("***************")
 
 }
