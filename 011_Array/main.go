@@ -51,4 +51,16 @@ func main() {
 
 	fmt.Println("*****************")
 
+	// Now i want then at the time of Declaration i want to initialized then array value.
+
+	arr := [3]int{1, 2, 3}
+	fmt.Println(arr)
+	/*
+		Here at declaration of an array we fixed the length of an array.
+		If we excide the value more than the length then we get an error.
+		But if our initialization is less than length of array then for extra empty space is occupied by ZERO.
+	*/
+
+	fmt.Println("*****************")
+
 }
