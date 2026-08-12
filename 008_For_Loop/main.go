@@ -56,4 +56,18 @@ func main() {
 
 	fmt.Println("***************")
 
+	// New update in GOLANG
+
+	// Range
+	/*
+		Basically by using range instead for loopp when we want to do some ativity in contunity.
+
+		in RANGE i start form i := 0 to given range for ex
+		for i := range 10
+		then it print from 0 to 9 total 10 digits
+		Output : 0 1 2 3 4 5 6 7 8 9
+	*/
+
+	
+
 }
