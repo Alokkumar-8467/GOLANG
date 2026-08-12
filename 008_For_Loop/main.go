@@ -33,6 +33,7 @@ func main() {
 	fmt.Println("***************")
 
 	// Now Break in For Loop
+	// Break stop the loop and come out form loop
 	for i := 0; i < 3; i++ {
 		if i == 2 {
 			break
@@ -44,6 +45,7 @@ func main() {
 	fmt.Println("***************")
 
 	// Now Continue in For loop
+	// Continue skip the recent loop and go further.
 	for i := 0; i <= 3; i++ {
 		if i == 1 {
 			continue
