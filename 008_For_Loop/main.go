@@ -33,7 +33,7 @@ func main() {
 	fmt.Println("***************")
 
 	// Now Break in For Loop
-	// Break stop the loop and come out form loop
+	// Break stop the loop and come out from loop
 	for i := 0; i < 3; i++ {
 		if i == 2 {
 			break
