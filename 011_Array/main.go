@@ -42,6 +42,7 @@ func main() {
 	// it show empty string
 
 	fmt.Println("*****************")
+	
 
 	/* But i have 4 string array and i decalre the index[2] with "GOLANG" then index[0], index[1], index[3] show empty string but index[2] show GOLANG in output
 	 */
