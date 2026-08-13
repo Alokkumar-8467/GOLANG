@@ -67,6 +67,7 @@ func main() {
 	it's an string
 	it's an boolean
 	other
+	
 
 	*/
 
