@@ -30,6 +30,8 @@ func main() {
 	// var num = make([]int, 10)
 	// Output: [0 0]
 
+	// Now When we declare the size and initialized or even not initialize the value then it show Value 0 0 0 0 not NIL.
+
 	var num = make([]int, 10)
 	// Output: [0 0 0 0 0 0 0 0 0 0]
 	fmt.Println(num)
