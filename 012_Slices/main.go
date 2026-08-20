@@ -22,4 +22,16 @@ func main() {
 	// Check it is nil or not
 	fmt.Println(nums == nil)
 	// Output: true
+
+	// To avoide NIL in slice we use "make()" function
+	// here in make() function we take our slice var as integer and size of slice is 2
+	// make([]int, 10)
+
+	// var num = make([]int, 10)
+	// Output: [0 0]
+
+	var num = make([]int, 10)
+	// Output: [0 0 0 0 0 0 0 0 0 0]
+	fmt.Println(num)
+
 }
