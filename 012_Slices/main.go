@@ -43,4 +43,13 @@ func main() {
 	fmt.Println(cap(num))
 	// Output: 10
 
+	// So in SLICE make() function it have three things
+
+	// var num = make(int[], 2, 10)
+
+	// inside make() function 3 things
+	// 1. int[] = inform about the dataType in SLICE.
+	// 2. 2 = inform about the LIMIT of the SLICE.
+	// 3. 10 = inform about the CAPACITY of the SLICE.
+
 }
