@@ -39,4 +39,8 @@ func main() {
 	// NOTE:  in this make([]int, 2 or 10)
 	// Just Show the limit of this slice, it doesn't mean more than 2 elements not store. SLice can store more then 2 element in this num slice.
 
+	// How to check capacity on slice
+	fmt.Println(cap(num))
+	// Output: 10
+
 }
