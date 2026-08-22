@@ -50,6 +50,11 @@ func main() {
 	// inside make() function 3 things
 	// 1. int[] = inform about the dataType in SLICE.
 	// 2. 2 = inform about the LIMIT of the SLICE.
-	// 3. 10 = inform about the CAPACITY of the SLICE.
+	// 3. 10 = inform about the INITAIL CAPACITY of the SLICE.
+	// Link this
+
+	var kk = make([]int, 5, 10)
+	fmt.Println(kk)
+	// Here we use the CAPACITY as 10 but if we insert the element more than capacity then it resize it.
 
 }
