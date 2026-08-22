@@ -97,4 +97,10 @@ func main() {
 
 	// Now see the capacity of the SLICE is doubled from 10 ==>> 20.
 
+	// Now you notice in every slice output there is 0 0 in first and second place.
+
+	// It comes because we initialize the slice by limit 0 so for the first time when slice execute it fll the sapce by 0 0.
+
+	// So, to get empty SLICE we use limit as 0 like this
+
 }
