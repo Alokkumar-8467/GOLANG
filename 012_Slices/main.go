@@ -57,4 +57,7 @@ func main() {
 	fmt.Println(kk)
 	// Here we use the CAPACITY as 10 but if we insert the element more than capacity then it resize it.
 
+	// Now how to add element in SLICE.
+	
+
 }
