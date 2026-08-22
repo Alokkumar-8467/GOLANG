@@ -59,11 +59,42 @@ func main() {
 
 	// Now how to add element in SLICE.
 
-	So we hve a function name append()
+	// So we hve a function name append()
 
-	nums = append(nums, 1)
-	fmt.Println(nums)
-	fmt.Println(cap(nums))
-	
+	var name = make([]int, 2, 5)
+	name = append(name, 1)
+	name = append(name, 2)
+	fmt.Println(name)
+	fmt.Println(cap(name))
+
+	// Output: [0 0 1 2]
+	// 5
+
+	// Now we insert more than 5 elements
+	name = append(name, 3)
+	name = append(name, 4)
+	name = append(name, 5)
+	name = append(name, 6)
+	fmt.Println(name)
+	fmt.Println(cap(name))
+	// Output: [0 0 1 2 3 4 5 6]
+	// 10
+
+	// Now see the capacity of the SLICE is doubled from 5 ==>> 10.
+
+	// Now we insert more than 10 elements
+	name = append(name, 7)
+	name = append(name, 8)
+	name = append(name, 9)
+	name = append(name, 10)
+	name = append(name, 11)
+	name = append(name, 12)
+	name = append(name, 13)
+	fmt.Println(name)
+	fmt.Println(cap(name))
+	// Output: [0 0 1 2 3 4 5 6 7 8 9 10 11 12 13]
+	// 20
+
+	// Now see the capacity of the SLICE is doubled from 10 ==>> 20.
 
 }
