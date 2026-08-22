@@ -101,6 +101,15 @@ func main() {
 
 	// It comes because we initialize the slice by limit 0 so for the first time when slice execute it fll the sapce by 0 0.
 
-	// So, to get empty SLICE we use limit as 0 like this
+	// So, to get empty SLICE we use limit as 0 like this.
+
+	var carNumber = make([]int, 0, 5)
+	carNumber = append(carNumber, 1)
+	carNumber = append(carNumber, 2)
+	carNumber = append(carNumber, 3)
+	carNumber = append(carNumber, 4)
+	fmt.Println(carNumber)
+	fmt.Println(cap(carNumber))
+	fmt.Println(len(carNumber))
 
 }
