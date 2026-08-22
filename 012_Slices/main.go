@@ -58,6 +58,12 @@ func main() {
 	// Here we use the CAPACITY as 10 but if we insert the element more than capacity then it resize it.
 
 	// Now how to add element in SLICE.
+
+	So we hve a function name append()
+
+	nums = append(nums, 1)
+	fmt.Println(nums)
+	fmt.Println(cap(nums))
 	
 
 }
