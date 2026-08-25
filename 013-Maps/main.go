@@ -46,4 +46,10 @@ func main() {
 	fmt.Println(m)
 	// Output= map[name:golang]
 
+	// If we want to clear or empty the map then we use clear() function.
+
+	clear(m)
+	fmt.Println(m)
+	// Output = map[] empty map.
+
 }
