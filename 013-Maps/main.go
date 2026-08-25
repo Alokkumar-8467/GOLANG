@@ -1,14 +1,18 @@
-package main 
+package main
+
+import "fmt"
 
 // maps => hash, object, dict in different programmign languages.
 
 func main() {
-  	// Creating map
+
+	// Creating map
 	m := make(map[string]string)
 
-		// Setting an element
+	// Setting an element
 	m["name"] = "golang"
 
-		// Get an element
+	// Get an element
 	fmt.Println(m["name"])
+
 }
