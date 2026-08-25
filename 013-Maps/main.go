@@ -58,4 +58,16 @@ func main() {
 	fmt.Println(shop)
 	// Output = map[phones:3 price:40]
 
+	// To get any element form map or to check that it is available or not or any conditional things then we use this.
+
+	v, ok := shop["phones"]
+	fmt.Println(v)
+	if ok {
+		fmt.Println("all ok")
+	} else {
+		fmt.Println("not ok")
+	}
+
+	// Output = 3
+	// 					all ok
 }
