@@ -11,8 +11,11 @@ func main() {
 
 	// Setting an element
 	m["name"] = "golang"
+	m["area"] = "backend"
 
 	// Get an element
-	fmt.Println(m["name"])
+	fmt.Println(m["name"], m["area"])
+	// Output = golang
+	// Output = golang backend
 
 }
