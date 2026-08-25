@@ -18,4 +18,16 @@ func main() {
 	// Output = golang
 	// Output = golang backend
 
+	// What happen if we try to access those keys that are not exist in map.
+	fmt.Println(m["phone"])
+	// Output =
+	// If key does not exists in the map then it returns ZERO value.
+
+	// Now check this for BOOLEAN for more confirmation.
+
+	n := make(map[string]int)
+	n["roll"] = 12
+	fmt.Println(n["roll"], n["kola"])
+	// Output = 12 0
+
 }
