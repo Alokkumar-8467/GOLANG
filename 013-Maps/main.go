@@ -52,4 +52,10 @@ func main() {
 	fmt.Println(m)
 	// Output = map[] empty map.
 
+	// Now we can declare map by another method not using make() function.
+
+	shop := map[string]int{"price": 40, "phones": 3}
+	fmt.Println(shop)
+	// Output = map[phones:3 price:40]
+
 }
