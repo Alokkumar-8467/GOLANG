@@ -8,4 +8,7 @@ func main() {
 
 		// Setting an element
 	m["name"] = "golang"
+
+		// Get an element
+	fmt.Println(m["name"])
 }
