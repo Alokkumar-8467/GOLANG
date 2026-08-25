@@ -37,4 +37,13 @@ func main() {
 	fmt.Println(len(m), len(n))
 	// Output = 2 1
 
+	// How to Print whole map not element wise.
+	fmt.Println(m)
+	// Output = map[area:backend name:golang]
+
+	// Delete ELEMENT for MAP
+	delete(m, "area")
+	fmt.Println(m)
+	// Output= map[name:golang]
+
 }
