@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"maps"
+)
 
 // maps => hash, object, dict in different programmign languages.
 
@@ -69,5 +72,19 @@ func main() {
 	}
 
 	// Output = 3
-	// 			all ok
+	// 					all ok
+
+	// Now we have 2 MAP's and i want to check hese two are equal or not.
+
+	m1 := map[string]int{"price": 40, "phones": 3}
+	m2 := map[string]int{"price": 40, "phones": 3}
+
+	fmt.Println(maps.Equal(m1, m2))
+	// Output = true
+
+	m3 := map[string]int{"price": 140, "phones": 3}
+	m4 := map[string]int{"price": 40, "phones": 3}
+	fmt.Println(maps.Equal(m3, m4))
+	// Output = false
+
 }
