@@ -26,4 +26,18 @@ func main() {
 	}
 	fmt.Println(sum)
 	// Output = 21
+
+	// Now to print number with INDEX so _, is replaced by i and i is INDEX in RANGE.
+
+	for i, num := range nums {
+		fmt.Println(num, i)
+	}
+
+	/* Output =
+	6 0
+	7 1
+	8 2
+
+	*/
+
 }
