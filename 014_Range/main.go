@@ -70,4 +70,19 @@ func main() {
 	5 103
 	*/
 
+	// Now getting each and every charater of STRING then use string() function.
+
+	for i, c := range "golang" {
+		fmt.Println(i, string(c))
+	}
+
+	/*
+		0 g
+		1 o
+		2 l
+		3 a
+		4 n
+		5 g
+	*/
+
 }
