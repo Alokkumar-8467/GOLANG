@@ -32,6 +32,10 @@ func getLanguagesMixed() (string, string, bool) {
 
 // Basically in GOLANG we retun two things the function value and the secind one is error.
 
+// To compress any compiler error we use "_" to supress that error.
+
+// GOLANG functions are first class citizen functions() and can be used or assigned those functions to any variable and pass those functions as arguments for other functions.
+
 func main() {
 	result := add(3, 5)
 	fmt.Println(result)
@@ -41,4 +45,5 @@ func main() {
 
 	fmt.Println(getLanguagesMixed())
 	// Output = golang javaScript true
+
 }
