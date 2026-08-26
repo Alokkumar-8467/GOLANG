@@ -11,13 +11,23 @@ but this int { define that there is a return type and must be int.
 
 */
 
+// Function 1
 func add(a int, b int) int {
 	// we can also write as
 	// add(a, b int)
 	return a + b
 }
 
+// Function 2
+// We can return multiple values in GOLANG Function.
+func getLanguages() (string, string, string) {
+	return "golang", "javaScript", "c++"
+}
+
 func main() {
 	result := add(3, 5)
 	fmt.Println(result)
+	// Output = 8
+	fmt.Println(getLanguages())
+	// Output = golang javaScript c++
 }
