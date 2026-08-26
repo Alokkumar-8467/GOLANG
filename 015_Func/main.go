@@ -24,10 +24,19 @@ func getLanguages() (string, string, string) {
 	return "golang", "javaScript", "c++"
 }
 
+// Function 3
+// We can return multiple values in GOLANG Function.
+func getLanguagesMixed() (string, string, bool) {
+	return "golang", "javaScript", true
+}
+
 func main() {
 	result := add(3, 5)
 	fmt.Println(result)
 	// Output = 8
 	fmt.Println(getLanguages())
 	// Output = golang javaScript c++
+
+	fmt.Println(getLanguagesMixed())
+	// Output = golang javaScript true
 }
