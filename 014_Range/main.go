@@ -54,4 +54,20 @@ func main() {
 
 	fmt.Println("***********")
 
+	// Now access String by using RANGE
+	// Basically give UNICODE
+
+	for i, c := range "golang" {
+		fmt.Println(i, c)
+	}
+
+	/* Output =
+	0 103
+	1 111
+	2 108
+	3 97
+	4 110
+	5 103
+	*/
+
 }
