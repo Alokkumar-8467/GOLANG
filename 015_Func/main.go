@@ -12,6 +12,8 @@ but this int { define that there is a return type and must be int.
 */
 
 func add(a int, b int) int {
+	// we can also write as
+	// add(a, b int)
 	return a + b
 }
 
