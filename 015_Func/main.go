@@ -46,4 +46,12 @@ func main() {
 	fmt.Println(getLanguagesMixed())
 	// Output = golang javaScript true
 
+	// Assign a function to a variable
+	greet := func(name string) string {
+		return "Hello, " + name
+	}
+
+	fmt.Println(greet("Alok"))
+	// Output = Hello, Alok
+
 }
