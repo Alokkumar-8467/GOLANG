@@ -27,8 +27,11 @@ func main() {
 	fmt.Println(sum)
 	// Output = 21
 
+	fmt.Println("***********")
+
 	// Now to print number with INDEX so _, is replaced by i and i is INDEX in RANGE.
 
+	// Now to access SLICE by RANGE
 	for i, num := range nums {
 		fmt.Println(num, i)
 	}
@@ -37,7 +40,18 @@ func main() {
 	6 0
 	7 1
 	8 2
-
 	*/
+
+	fmt.Println("***********")
+
+	// Now access MAP by using RANGE
+
+	m := map[string]string{"fname": "John", "lname": "doe"}
+
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
+
+	fmt.Println("***********")
 
 }
