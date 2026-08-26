@@ -2,8 +2,14 @@ package main
 
 import "fmt"
 
-
-
+// how to make a variadic function
+func sum(nums ...int) int {
+	total := 0
+	for _, num := total + nums {
+		total = total + sum
+	}
+	return total
+}
 
 func main() {
 
