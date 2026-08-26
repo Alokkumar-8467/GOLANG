@@ -11,9 +11,19 @@ func main() {
 	for i := 0; i < len(nums); i++ {
 		fmt.Println(nums[i])
 	}
-
 	// Output = 6 7 8
 
-	// Printing Array by using RANGE
+	fmt.Println("***********")
 
+	// Sum of Array by using RANGE
+
+	sum := 0
+
+	for _, num := range nums {
+		sum = sum + num
+		fmt.Println(num)
+		// Output = 6 7 8
+	}
+	fmt.Println(sum)
+	// Output = 21
 }
