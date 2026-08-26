@@ -30,6 +30,8 @@ func getLanguagesMixed() (string, string, bool) {
 	return "golang", "javaScript", true
 }
 
+// Basically in GOLANG we retun two things the function value and the secind one is error.
+
 func main() {
 	result := add(3, 5)
 	fmt.Println(result)
