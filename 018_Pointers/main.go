@@ -33,11 +33,27 @@ Back in main(): 0xA was never touched, so it's still 1
 
 */
 
+// Now pass by reference this means "POINTERS"
+
+// By reference
+
+func changeNumRef(num *int) {
+	*num = 5
+	fmt.Println("In changeNumRef", *num)
+}
+
 func main() {
 
 	num := 1
 
+	fmt.Println("pass by Value")
 	changeNum(num)
 	fmt.Println("After changeNum in main", num)
+
+	fmt.Println("**************")
+
+	fmt.Println("pass by Reference")
+	changeNumRef(&num)
+	fmt.Println("After changeNumRef in main", num)
 
 }
