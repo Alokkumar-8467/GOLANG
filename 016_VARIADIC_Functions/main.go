@@ -13,7 +13,12 @@ func sum(nums ...int) int {
 	return total
 }
 
-// If we want to make a function tahat take any Data Type then we need to use interface.
+// If we want to make a function that take any Data Type then we need to use ...any or ...interface.
+
+func anyType(nums ...any) int {
+	fmt.Println(nums...)
+	return len(nums)
+}
 
 func main() {
 
@@ -23,5 +28,8 @@ func main() {
 
 	result := sum(1, 2, 3, 4, 5, 6, 7, 8)
 	fmt.Println(result)
+
+	finalResult := anyType(1, 3, 5, 6, "kola", 345, true, false, "alok")
+	fmt.Println(finalResult)
 
 }
