@@ -16,6 +16,12 @@ type order struct {
 	createdAt time.Time
 }
 
+// To pass or connect the struct to a function
+// receiver type
+func (o *order) changeStatus(status string) {
+	o.status = status
+}
+
 func main() {
 
 	myOrder := order{
