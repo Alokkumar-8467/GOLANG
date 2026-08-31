@@ -18,6 +18,10 @@ type order struct {
 
 func main() {
 
-
+	myOrder := order{
+		id:     "1",
+		amount: 50.00,
+		status: "received",
+	}
 
 }
