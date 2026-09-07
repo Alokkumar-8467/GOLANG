@@ -7,6 +7,12 @@ func printSlice(items []int) {
 	}
 }
 
+func printStringSlice(items []string) {
+	for _, item := range items {
+		fmt.Println(item)
+	}
+}
+
 
 func main() {
 
