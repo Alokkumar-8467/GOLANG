@@ -24,7 +24,6 @@ const (
 )
 ```
 
-
 ### What's happening here:
 
 - `OrderStatus` is defined as a new type based on `int`.
@@ -88,12 +87,10 @@ func main() {
 }
 ```
 
-
 - `changeOrderStatus(Prepared)` passes the integer-based enum value `Prepared` (which is `2` under the hood).
 - `changeOrderStatusString(PreparedString)` passes the string-based enum value `PreparedString` (which is `"Prepared"`).
 
 ---
-
 
 ## How It Runs
 
