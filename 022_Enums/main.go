@@ -8,6 +8,7 @@ type OrderStatus int
 
 const (
 	Received OrderStatus = iota
+	
 	Confirmed
 	Prepared
 	Delivered
