@@ -27,6 +27,8 @@ func (p payment) makePayment(amount float32) {
 	stripePaymentGw.pay(amount)
 
 	p.gateway.pay(amount)
+
+	
 }
 
 type razorpay struct{}
