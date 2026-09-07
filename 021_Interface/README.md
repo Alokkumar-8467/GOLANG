@@ -67,6 +67,7 @@ func (p payment) makePayment(amount float32) {
 	p.gateway.pay(amount)
 }
 
+
 ```
 
 This method is called on a `payment` value and triggers a payment. (See [Known Issue](#known-issue-in-makepayment) below — this currently does more than intended.)
