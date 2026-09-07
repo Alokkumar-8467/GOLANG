@@ -13,6 +13,7 @@ const (
 	Confirmed
 	Prepared
 	Delivered
+	
 )
 
 func changeOrderStatus(status OrderStatus) {
