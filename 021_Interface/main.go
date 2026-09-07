@@ -12,6 +12,7 @@ type payment struct {
 	// first we use strip as payment gateway
 	// gateway stripe
 
+	
 	// Now we want to use razorpay as payment gateway so we can use interface here
 	// gateway razorpay
 
