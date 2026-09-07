@@ -88,6 +88,7 @@ func main() {
 }
 ```
 
+
 - `changeOrderStatus(Prepared)` passes the integer-based enum value `Prepared` (which is `2` under the hood).
 - `changeOrderStatusString(PreparedString)` passes the string-based enum value `PreparedString` (which is `"Prepared"`).
 
