@@ -31,6 +31,7 @@ func main() {
 	nums := []int{1, 2, 3}
 	printSlice(nums)
 
+	
 	fmt.Println("*************")
 
 	
