@@ -1,5 +1,6 @@
 package main
 
+import "fmt"
 
 func printSlice(items []int) {
 	for _, item := range items {
@@ -13,10 +14,8 @@ func printStringSlice(items []string) {
 	}
 }
 
-
 func main() {
 
-	
 	// It Print the int Slice
 	nums := []int{1, 2, 3}
 	printSlice(nums)
