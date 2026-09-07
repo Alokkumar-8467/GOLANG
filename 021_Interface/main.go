@@ -41,6 +41,7 @@ type stripe struct{}
 
 func (s stripe) pay(amount float32) {
 	fmt.Println("Making payment using stripe", amount)
+	
 }
 
 type fakepayment struct{}
