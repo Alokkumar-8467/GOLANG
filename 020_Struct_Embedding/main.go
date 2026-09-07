@@ -7,16 +7,7 @@ import (
 
 // We can embed struct in another struct to use the fields of the embedded struct in the parent struct
 
-// Like in Order struct we can embed the Customer struct to use the fields of Customer in Order struct
-
-type customer struct {
-	name  string
-	phone string
-}
-
-type order struct {
-	id        string
-	amount    float32
+// Like in Order struct we can
 	status    string
 	createdAt time.Time
 	customer  // Embedded struct
