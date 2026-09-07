@@ -8,6 +8,7 @@ type paymenter interface {
 	pay(amount float32)
 }
 
+
 type payment struct {
 	// first we use strip as payment gateway
 	// gateway stripe
