@@ -34,4 +34,10 @@ func main() {
 	// Now Print the string Slice
 	names := []string{"GOLANG", "JS", "SQL"}
 	printStringSlice(names)
+
+		// Now Print the string Slice using generics
+	fmt.Println("*************")
+	printGenericSlice(nums)
+	fmt.Println("*************")
+	printGenericSlice(names)
 }
