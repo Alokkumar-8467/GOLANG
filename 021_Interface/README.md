@@ -22,7 +22,6 @@ type paymenter interface {
 }
 ```
 
-
 - An interface in Go is a **set of method signatures**.
 - Any type that implements all the methods of an interface **automatically satisfies** that interface — there's no `implements` keyword like in Java or C#.
 - This is called **implicit satisfaction** (also known as "structural typing").
@@ -66,8 +65,6 @@ func (p payment) makePayment(amount float32) {
 
 	p.gateway.pay(amount)
 }
-
-
 ```
 
 This method is called on a `payment` value and triggers a payment. (See [Known Issue](#known-issue-in-makepayment) below — this currently does more than intended.)
