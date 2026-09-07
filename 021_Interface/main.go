@@ -54,6 +54,8 @@ func (p paypal) pay(amount float32) {
 	fmt.Println("Making payment using PayPal", amount)
 }
 
+
+
 func main() {
 	// newPayment := payment{}
 
