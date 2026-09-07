@@ -24,6 +24,7 @@ const (
 )
 ```
 
+
 ### What's happening here:
 
 - `OrderStatus` is defined as a new type based on `int`.
