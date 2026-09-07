@@ -4,6 +4,7 @@ import "fmt"
 
 // enumerated types
 
+
 type OrderStatus int
 
 const (
