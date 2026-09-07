@@ -27,8 +27,6 @@ func (p payment) makePayment(amount float32) {
 	stripePaymentGw.pay(amount)
 
 	p.gateway.pay(amount)
-
-	
 }
 
 type razorpay struct{}
@@ -52,12 +50,9 @@ func (f fakepayment) pay(amount float32) {
 // Now adding PayPal as payment gateway
 type paypal struct{}
 
-
 func (p paypal) pay(amount float32) {
 	fmt.Println("Making payment using PayPal", amount)
 }
-
-
 
 func main() {
 	// newPayment := payment{}
