@@ -26,6 +26,7 @@ func printGenericSlice[T any](items []T) {
 
 func main() {
 
+	
 	// It Print the int Slice
 	nums := []int{1, 2, 3}
 	printSlice(nums)
