@@ -1,12 +1,7 @@
 
 
 
-Think of it like this analogy:
 
-go
-type Person struct {
-	Name string
-}
 
 func main() {
 	p := Person{Name: "Alice"} // creating a value
