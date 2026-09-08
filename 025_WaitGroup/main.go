@@ -10,6 +10,7 @@ func task(id int, w *sync.WaitGroup) {
 	fmt.Println("Doing task", id)
 }
 
+
 func main() {
 
 	// Here we are creating the WaitGroup variable, which will be used to wait for all the goroutines to finish.
