@@ -35,10 +35,11 @@ func main() {
 	// fmt.Println(msg)
 
 
-		// 2. Channel Example by using a function to process the number. ************
-	numChan := make(chan int)
+	// 2. Channel Example by using a function to process the number. ************
+	num := make(chan int)
 
-	go processNum(numChan)
-	numChan <- 42
+	go processNum(num)
+	num <- 5
+	time.Sleep(time.Second * 2)
 
 }
