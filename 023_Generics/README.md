@@ -5,11 +5,6 @@
 
 
 
-One small note: in Go, struct types are usually capitalized (Stack) if you want them exported/visible outside the package, but for a main package that doesn't matter — lowercase stack is fine here.
-
-
-
-
 
 
 
