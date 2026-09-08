@@ -7,3 +7,12 @@ func main() {
 
 	// How to create a channel in Go?
 	messageChan := make(chan string)
+
+		// How to send a message to a channel in Go?
+	messageChan <- "Ping, channel!"
+
+	// How to receive a message from a channel in Go?
+	msg := <-messageChan
+	println(msg)
+
+}
