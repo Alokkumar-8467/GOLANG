@@ -4,9 +4,6 @@
 
 
 
-type Person struct {...} is the definition (can be top-level, outside main). p := Person{...} is you making an actual person value, and that line lives wherever you need it — often inside main or another function.
-
-So your structure is already correct:
 
 type stack struct { elements []int } → package-level, defines the shape
 myStack := stack{elements: []int{1, 2, 3}} → inside main, creates an actual instance
