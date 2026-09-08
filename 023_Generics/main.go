@@ -47,4 +47,13 @@ func main() {
 	// Now Print the string Slice using generics
 	printGenericSlice(names)
 	fmt.Println("Printing the string Slice by using generics")
+
+		// Now Print the string Slice using Scope generics
+	fmt.Println("*************")
+	printGenericScopedSlice(nums)
+	fmt.Println("Printing the int Slice by using Scope generics")
+	fmt.Println("*************")
+	// Now Print the string Slice using Scope generics
+	printGenericScopedSlice(names)
+	fmt.Println("Printing the string Slice by using Scope generics")
 }
