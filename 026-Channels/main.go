@@ -27,4 +27,11 @@ func main() {
 	// msg := <-messageChan
 	// fmt.Println(msg)
 
+
+		// 2. Channel Example by using a function to process the number. ************
+	numChan := make(chan int)
+
+	go processNum(numChan)
+	numChan <- 42
+
 }
