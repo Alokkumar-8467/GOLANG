@@ -42,7 +42,9 @@ func main() {
 	// Now Print the string Slice using generics
 	fmt.Println("*************")
 	printGenericSlice(nums)
+	fmt.Println("Printing the int Slice by using generics")
 	fmt.Println("*************")
 	// Now Print the string Slice using generics
 	printGenericSlice(names)
+	fmt.Println("Printing the string Slice by using generics")
 }
