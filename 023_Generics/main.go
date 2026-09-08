@@ -33,6 +33,7 @@ func main() {
 	printSlice(nums)
 
 	fmt.Println("*************")
+	
 
 	// Now Print the string Slice
 	names := []string{"GOLANG", "JS", "SQL"}
