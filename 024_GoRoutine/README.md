@@ -43,6 +43,7 @@ This means you can realistically run **thousands or even millions** of goroutine
 
 ### 3. Starting one is trivial
 
+
 Just prefix any function call with the `go` keyword:
 
 ```go
