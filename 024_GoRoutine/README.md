@@ -59,6 +59,7 @@ That's it — no thread pools, no manual thread management.
 ```go
 package main
 
+
 import "fmt"
 
 func brewCoffee() {
