@@ -11,14 +11,20 @@ func processNum(numChan chan int) {
 }
 func main() {
 
+	// 1. DeadLock Example ************
 	// How to create a channel in Go?
-	messageChan := make(chan string)
 
-		// How to send a message to a channel in Go?
-	messageChan <- "Ping, channel!"
+	// messageChan := make(chan string)
+
+	// How to send a message to a channel in Go?
+
+	// messageChan <- "Ping, channel!"
+
+	// now this will cause a deadlock because the main goroutine is trying to send a message to the channel, but there is no other goroutine that is receiving from the channel. So, the main goroutine will be blocked forever.
 
 	// How to receive a message from a channel in Go?
-	msg := <-messageChan
-	println(msg)
+
+	// msg := <-messageChan
+	// fmt.Println(msg)
 
 }
