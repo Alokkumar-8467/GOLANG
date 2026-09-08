@@ -1,13 +1,18 @@
 package main
 
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
 // When we have multiple goroutines running concurrently, we need a way to communicate between them. Channels provide a way for one goroutine to send data to another goroutine. Channels are a powerful feature of Go that allow us to build concurrent programs that are easy to reason about.
 
 // DEADLOCK
 // A deadlock is a situation where a program (or a set of goroutines/threads) gets stuck forever, because everyone involved is waiting on something that will never happen.
 
-
-func processNum(numChan chan int) {
-	fmt.Println("Processing Number", <-numChan)
+func processNum(num chan int) {
+	fmt.Println("Processing Number", <-num)
 }
 
 func processNumLoop(numChan chan int) {
@@ -34,7 +39,6 @@ func main() {
 	// msg := <-messageChan
 	// fmt.Println(msg)
 
-
 	// 2. Channel Example by using a function to process the number. ************
 	num := make(chan int)
 
@@ -42,7 +46,7 @@ func main() {
 	num <- 5
 	time.Sleep(time.Second * 2)
 
-		// 3. Channel Example by using a function to process the number. ************
+	// 3. Channel Example by using a function to process the number. ************
 	numChan := make(chan int)
 
 	go processNumLoop(numChan)
@@ -51,6 +55,5 @@ func main() {
 	for {
 		numChan <- rand.Intn(100)
 	}
-
 
 }
