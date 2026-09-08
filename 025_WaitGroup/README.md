@@ -12,7 +12,6 @@ import (
 	"sync"
 )
 
-
 func task(id int, w *sync.WaitGroup) {
 	defer w.Done()
 	fmt.Println("Doing task", id)
@@ -44,8 +43,7 @@ A `sync.WaitGroup` is essentially a **counter** with three operations:
 | `wg.Done()` | Decreases the counter by 1 (shorthand for `wg.Add(-1)`)    |
 | `wg.Wait()` | Blocks the calling goroutine until the counter reaches `0` |
 
->  **Important:** `WaitGroup` must always be passed by **pointer** (`*sync.WaitGroup`), not by value. If each goroutine received its own copy, calling `Done()` would decrement a copy's counter instead of the real one `main()` is watching — causing `wg.Wait()` to block **forever**.
-
+> ⚠️ **Important:** `WaitGroup` must always be passed by **pointer** (`*sync.WaitGroup`), not by value. If each goroutine received its own copy, calling `Done()` would decrement a copy's counter instead of the real one `main()` is watching — causing `wg.Wait()` to block **forever**.
 
 ---
 
@@ -56,7 +54,6 @@ A `sync.WaitGroup` is essentially a **counter** with three operations:
 Imagine a simple number that starts at `0`. That's all a `WaitGroup` really is internally — a counter.
 
 ```
-
 counter = 0
 ```
 
@@ -129,7 +126,6 @@ meanwhile, goroutines run and finish in random order:
 the instant counter=0:
    Wait() unfreezes → main() continues (in this code, main() just ends here)
 ```
-
 
 ---
 
