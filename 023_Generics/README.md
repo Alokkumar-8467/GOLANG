@@ -1,21 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Go Generics Example
 
 This project demonstrates the evolution from duplicated type-specific functions to using **Go generics**, along with type constraints (`any`, `comparable`, custom union constraints), and a generic `stack` type.
