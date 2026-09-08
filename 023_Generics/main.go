@@ -34,6 +34,7 @@ func printGenericScopedSlice[T int | string](items []T) {
 	}
 }
 
+
 func main() {
 
 	// It Print the int Slice
