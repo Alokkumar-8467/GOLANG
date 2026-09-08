@@ -46,6 +46,7 @@ A `sync.WaitGroup` is essentially a **counter** with three operations:
 
 >  **Important:** `WaitGroup` must always be passed by **pointer** (`*sync.WaitGroup`), not by value. If each goroutine received its own copy, calling `Done()` would decrement a copy's counter instead of the real one `main()` is watching — causing `wg.Wait()` to block **forever**.
 
+
 ---
 
 ## Step-by-Step Breakdown
