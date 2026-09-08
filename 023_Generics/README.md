@@ -3,10 +3,6 @@
 
 
 
-func main() {
-	p := Person{Name: "Alice"} // creating a value
-	fmt.Println(p)
-}
 
 type Person struct {...} is the definition (can be top-level, outside main). p := Person{...} is you making an actual person value, and that line lives wherever you need it — often inside main or another function.
 
