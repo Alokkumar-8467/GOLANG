@@ -5,6 +5,10 @@ package main
 // DEADLOCK
 // A deadlock is a situation where a program (or a set of goroutines/threads) gets stuck forever, because everyone involved is waiting on something that will never happen.
 
+
+func processNum(numChan chan int) {
+	fmt.Println("Processing Number", <-numChan)
+}
 func main() {
 
 	// How to create a channel in Go?
