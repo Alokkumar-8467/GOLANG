@@ -54,6 +54,7 @@ A `sync.WaitGroup` is essentially a **counter** with three operations:
 Imagine a simple number that starts at `0`. That's all a `WaitGroup` really is internally — a counter.
 
 ```
+
 counter = 0
 ```
 
