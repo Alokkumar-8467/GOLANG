@@ -9,6 +9,13 @@ package main
 func processNum(numChan chan int) {
 	fmt.Println("Processing Number", <-numChan)
 }
+
+func processNumLoop(numChan chan int) {
+	for num := range numChan {
+		fmt.Println("Processing Number", num)
+	}
+}
+
 func main() {
 
 	// 1. DeadLock Example ************
