@@ -1,13 +1,5 @@
 
 
-This just tells Go "there exists a type called stack, and it has a field elements which is a slice of ints." It doesn't create any actual data in memory yet — it's a blueprint, like a class definition.
-
-2. Creating a value of that type (this can go inside main, or any function):
-
-go
-myStack := stack{
-	elements: []int{1, 2, 3},
-}
 
 Here you're actually instantiating that blueprint — creating a real stack value in memory, with elements set to [1, 2, 3].
 
