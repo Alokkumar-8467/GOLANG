@@ -1,10 +1,6 @@
 
 
 
-Here you're actually instantiating that blueprint — creating a real stack value in memory, with elements set to [1, 2, 3].
-
-You need step 1 to exist somewhere in the package (doesn't have to be right before main, Go doesn't care about declaration order at package level) before you can do step 2 anywhere that uses stack.
-
 Think of it like this analogy:
 
 go
