@@ -87,6 +87,7 @@ Breakfast ready!
 
 > Each function completely finishes before the next one starts. This is normal, single-threaded execution.
 
+
 ---
 
 ## Example 2: Same Code, But With Goroutines
