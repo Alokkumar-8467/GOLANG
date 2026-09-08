@@ -103,6 +103,7 @@ go run main.go
 ```
 
 **Expected behavior:**
+
 - Prints an `int` slice and a `string` slice using dedicated functions.
 - Prints the same slices using `printGenericSlice` (works for any type).
 - Prints the same slices using `printGenericScopedSlice` (restricted to `int`/`string`).
@@ -112,11 +113,11 @@ go run main.go
 
 ## Key Takeaways
 
-| Concept | Meaning |
-|---|---|
-| `[T any]` | `T` can be any type at all |
-| `[T comparable]` | `T` must support `==` / `!=` |
-| `[T int \| string]` | `T` must be exactly `int` or `string` (union constraint) |
+| Concept                              | Meaning                                                                                 |
+| ------------------------------------ | --------------------------------------------------------------------------------------- |
+| `[T any]`                            | `T` can be any type at all                                                              |
+| `[T comparable]`                     | `T` must support `==` / `!=`                                                            |
+| `[T int \| string]`                  | `T` must be exactly `int` or `string` (union constraint)                                |
 | Generic struct `genericStack[T any]` | The struct itself is parameterized, so one type definition supports many concrete types |
 
 ---
