@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-
 func task(id int) {
 	fmt.Println("Doing task", id)
 }
