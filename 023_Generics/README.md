@@ -1,11 +1,4 @@
-Yes, that's right — you're just separating two different things: defining a type vs creating a value of that type.
 
-1. The type definition (usually at package level, outside any function):
-
-go
-type stack struct {
-	elements []int
-}
 
 This just tells Go "there exists a type called stack, and it has a field elements which is a slice of ints." It doesn't create any actual data in memory yet — it's a blueprint, like a class definition.
 
