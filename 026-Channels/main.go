@@ -77,7 +77,6 @@ func main() {
 	// result := make(chan int)
 	// go sum(result, 4, 5)
 	// res := <-result
-	
 	// fmt.Println(res)
 
 	// 5. We can do waitGroup functionality by using CHANNEL also. ************
