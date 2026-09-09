@@ -124,6 +124,7 @@ func main() {
 		emailChan <- fmt.Sprintf("%d@gmail.com", i)
 	}
 
+	
 	fmt.Println("done sending...")
 	close(emailChan)
 	<-emailDone
