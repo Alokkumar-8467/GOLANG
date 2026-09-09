@@ -126,5 +126,6 @@ func main() {
 		for i := 0; i < 100; i++ {
 
 			emailChan <- fmt.Sprintf("%d@gmail.com", i)
+				}
 	
 }
