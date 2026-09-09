@@ -30,7 +30,8 @@ func sum(result chan int, num1 int, num2 int) {
 
 // 5. We can do waitGroup functionality by using CHANNEL also.
 func task(done chan bool) {
-		// Here we use difer function, it run when all the take is completed. If function give error then also it run.
+
+	// Here we use difer function, it run when all the take is completed. If function give error then also it run.
 	defer func() { done <- true }()
 	fmt.Println("Processing...")
 }
@@ -71,19 +72,17 @@ func main() {
 	// 	numChan <- rand.Intn(100)
 	// }
 
-	// 4. Here we receive data from function to CHANNEL
+	// 4. Here we receive data from function to CHANNEL. ************
 
 	// result := make(chan int)
 	// go sum(result, 4, 5)
 	// res := <-result
 	// fmt.Println(res)
 
-		// 5. We can do waitGroup functionality by using CHANNEL also. ************
+	// 5. We can do waitGroup functionality by using CHANNEL also. ************
 
-		done := make(chan bool)
-
-		go task(done)
+	done := make(chan bool)
+	go task(done)
 	<-done // here program comes and block. Basically here function ends.
 
-	
 }
