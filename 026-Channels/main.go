@@ -129,15 +129,16 @@ func main() {
 	close(emailChan)
 	<-emailDone
 
-		// 7. Now to receive data from MULTIPLE CHANNEL at a time. ************
-		chan1 := make(chan int)
+	// 7. Now to receive data from MULTIPLE CHANNEL at a time. ************
+
+	chan1 := make(chan int)
 	chan2 := make(chan string)
 
-		go func() {
+	go func() {
 		chan1 <- 10
 	}()
 
-		go func() {
+	go func() {
 		chan2 <- "GOLANG"
 	}()
 	
