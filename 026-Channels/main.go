@@ -136,5 +136,9 @@ func main() {
 		go func() {
 		chan1 <- 10
 	}()
+
+		go func() {
+		chan2 <- "GOLANG"
+	}()
 	
 }
