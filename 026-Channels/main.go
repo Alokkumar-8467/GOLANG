@@ -96,4 +96,6 @@ func main() {
 	<-done 
 	// here program comes and block. Basically here function ends.
 
+		// Now 6. ************
+
 }
