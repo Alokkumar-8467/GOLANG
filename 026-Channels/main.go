@@ -98,4 +98,6 @@ func main() {
 
 		// Now 6. ************
 
+		// In earlier CHANNEL form 1 to 5, the condition is when we only send one data at a time, and wheneve the data not received then we not able to send the new data into that CHANNEL.
+
 }
