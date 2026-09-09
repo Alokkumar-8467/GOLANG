@@ -144,5 +144,7 @@ func main() {
 
 	for i := 0; i < 2; i++ {
 		select {
+			case chan1Val := <-chan1:
+			fmt.Println("Received Data from chan1", chan1Val)
 	
 }
