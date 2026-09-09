@@ -37,11 +37,12 @@ func task(done chan bool) {
 }
 
 // 6. Email sender by CHANNEL
+
 func emailSender(emailChan chan string, emailDone chan bool) {
 	defer func() { emailDone <- true }()
 	for email := range emailChan {
 		fmt.Println("Sending email to", email)
-				time.Sleep(time.Second)
+		time.Sleep(time.Second)
 	}
 }
 
