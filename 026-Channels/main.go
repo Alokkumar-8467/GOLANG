@@ -11,6 +11,7 @@ import (
 // DEADLOCK
 // A deadlock is a situation where a program (or a set of goroutines/threads) gets stuck forever, because everyone involved is waiting on something that will never happen.
 
+// 2. Basic Channel
 func processNum(num chan int) {
 	fmt.Println("Processing Number", <-num)
 }
