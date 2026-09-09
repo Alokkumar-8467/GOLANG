@@ -132,5 +132,9 @@ func main() {
 		// 7. Now to receive data from MULTIPLE CHANNEL at a time. ************
 		chan1 := make(chan int)
 	chan2 := make(chan string)
+
+		go func() {
+		chan1 <- 10
+	}()
 	
 }
