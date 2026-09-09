@@ -28,6 +28,10 @@ func sum(result chan int, num1 int, num2 int) {
 	result <- numResult
 }
 
+// 5. We can do waitGroup functionality by using CHANNEL also.
+func task(done chan bool) {
+
+
 func main() {
 
 	// 1. DeadLock Example ************
