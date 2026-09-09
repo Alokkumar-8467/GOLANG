@@ -81,5 +81,9 @@ func main() {
 		// 5. We can do waitGroup functionality by using CHANNEL also. ************
 
 		done := make(chan bool)
+
+		go task(done)
+	<-done // here program comes and block. Basically here function ends.
+
 	
 }
