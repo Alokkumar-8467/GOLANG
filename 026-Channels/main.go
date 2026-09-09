@@ -65,5 +65,13 @@ func main() {
 	// 	numChan <- rand.Intn(100)
 	// }
 
+		// 4. Here we receive data from function to CHANNEL
+
+	result := make(chan int)
+
+	go sum(result, 4, 5)
+
+	res := <-result
+
 	
 }
