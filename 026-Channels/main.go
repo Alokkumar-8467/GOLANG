@@ -38,6 +38,7 @@ func task(done chan bool) {
 
 // 6. Email sender by CHANNEL
 func emailSender(emailChan chan string, emailDone chan bool) {
+	defer func() { emailDone <- true }()
 
 func main() {
 
