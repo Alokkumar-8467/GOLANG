@@ -23,6 +23,12 @@ func processNumLoop(numChan chan int) {
 	}
 }
 
+// 4. Here we receive data from function to CHANNEL
+func sum(result chan int, num1 int, num2 int) {
+	numResult := num1 + num2
+	result <- numResult
+}
+
 func main() {
 
 	// 1. DeadLock Example ************
