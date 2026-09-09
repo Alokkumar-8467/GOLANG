@@ -36,6 +36,8 @@ func task(done chan bool) {
 	fmt.Println("Processing...")
 }
 
+// 6. Email sender by CHANNEL
+
 func main() {
 
 	// 1. DeadLock Example ************
