@@ -41,6 +41,9 @@ func emailSender(emailChan chan string, emailDone chan bool) {
 	defer func() { emailDone <- true }()
 	for email := range emailChan {
 		fmt.Println("Sending email to", email)
+				time.Sleep(time.Second)
+	}
+}
 
 func main() {
 
