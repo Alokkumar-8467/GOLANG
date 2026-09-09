@@ -122,5 +122,7 @@ func main() {
 	// emailChan <- "2@example.com"
 	// fmt.Println(<-emailChan)
 	// fmt.Println(<-emailChan)
+
+		for i := 0; i < 100; i++ {
 	
 }
