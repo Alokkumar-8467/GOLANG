@@ -55,14 +55,15 @@ func main() {
 	time.Sleep(time.Second * 2)
 
 	// 3. Channel Example by using a function to process the number. ************
-	numChan := make(chan int)
 
-	go processNumLoop(numChan)
+	// numChan := make(chan int)
+	// go processNumLoop(numChan)
 
-	// We sent random number to channel, So we use loop and ran function.
-	for {
-		numChan <- rand.Intn(100)
-	}
+	// We sent random number to channel, So we use loop and rand function.
+
+	// for {
+	// 	numChan <- rand.Intn(100)
+	// }
 
 	
 }
