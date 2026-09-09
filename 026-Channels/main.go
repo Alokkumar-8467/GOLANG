@@ -78,4 +78,7 @@ func main() {
 	// res := <-result
 	// fmt.Println(res)
 
+		// 5. We can do waitGroup functionality by using CHANNEL also. ************
+
+	
 }
