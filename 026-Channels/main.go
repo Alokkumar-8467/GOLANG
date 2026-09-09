@@ -146,5 +146,10 @@ func main() {
 		select {
 			case chan1Val := <-chan1:
 			fmt.Println("Received Data from chan1", chan1Val)
+
+			case chan2Val := <-chan2:
+			fmt.Println("Received Data from chan2", chan2Val)
+		}
+	}
 	
 }
