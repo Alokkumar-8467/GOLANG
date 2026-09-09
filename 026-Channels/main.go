@@ -37,6 +37,7 @@ func task(done chan bool) {
 }
 
 // 6. Email sender by CHANNEL
+func emailSender(emailChan chan string, emailDone chan bool) {
 
 func main() {
 
