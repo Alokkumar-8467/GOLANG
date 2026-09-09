@@ -129,4 +129,6 @@ func main() {
 	close(emailChan)
 	<-emailDone
 
+		// 7. Now to receive data from MULTIPLE CHANNEL at a time. ************
+	
 }
