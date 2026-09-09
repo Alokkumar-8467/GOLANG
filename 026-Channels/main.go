@@ -125,9 +125,7 @@ func main() {
 	}
 
 	fmt.Println("done sending...")
-
-		close(emailChan)
-
+	close(emailChan)
 	<-emailDone
 
 }
