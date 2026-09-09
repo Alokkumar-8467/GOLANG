@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"time"
 )
 
@@ -65,7 +64,7 @@ func main() {
 	// 	numChan <- rand.Intn(100)
 	// }
 
-		// 4. Here we receive data from function to CHANNEL
+	// 4. Here we receive data from function to CHANNEL
 
 	result := make(chan int)
 
@@ -73,7 +72,6 @@ func main() {
 
 	res := <-result
 
-		fmt.Println(res)
+	fmt.Println(res)
 
-	
 }
