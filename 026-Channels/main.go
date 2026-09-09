@@ -80,5 +80,6 @@ func main() {
 
 		// 5. We can do waitGroup functionality by using CHANNEL also. ************
 
+		done := make(chan bool)
 	
 }
