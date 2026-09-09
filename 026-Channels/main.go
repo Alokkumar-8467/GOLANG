@@ -108,4 +108,7 @@ func main() {
 	// Suppose we can create a channel for email system
 
 	emailChan := make(chan string, 100)
+		emailDone := make(chan bool)
+
+	go emailSender(emailChan, emailDone)
 }
