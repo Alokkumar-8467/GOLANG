@@ -129,5 +129,7 @@ func main() {
 				}
 
 	fmt.Println("done sending...")
+
+		<-emailDone
 	
 }
