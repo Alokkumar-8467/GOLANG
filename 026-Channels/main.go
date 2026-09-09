@@ -16,6 +16,7 @@ func processNum(num chan int) {
 	fmt.Println("Processing Number", <-num)
 }
 
+// 3. Sending Data to Channels
 func processNumLoop(numChan chan int) {
 	for num := range numChan {
 		fmt.Println("Processing Number", num)
