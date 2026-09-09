@@ -32,7 +32,8 @@ func sum(result chan int, num1 int, num2 int) {
 func task(done chan bool) {
 		// Here we use difer function, it run when all the take is completed. If function give error then also it run.
 	defer func() { done <- true }()
-
+	fmt.Println("Processing...")
+}
 
 func main() {
 
