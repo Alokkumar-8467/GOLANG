@@ -111,4 +111,15 @@ func main() {
 		emailDone := make(chan bool)
 
 	go emailSender(emailChan, emailDone)
+
+		/*
+		Here we write 100 that means in buffer we have a space of sending 100 items.
+		So, up to 100 this will work and no DEADLOCK happen. But if we increase the value form more than 100 then it start the DEADLOCK.
+	*/
+
+	// we dont generate our email like this
+	// emailChan <- "1@example.com"
+	// emailChan <- "2@example.com"
+	// fmt.Println(<-emailChan)
+	// fmt.Println(<-emailChan)
 }
