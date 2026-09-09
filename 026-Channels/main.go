@@ -93,26 +93,23 @@ func main() {
 
 	done := make(chan bool)
 	go task(done)
-	<-done 
+	<-done
 	// here program comes and block. Basically here function ends.
 
-		// Now 6. ************
+	// Now 6. ************
+	// In earlier CHANNEL form 1 to 5, the condition is when we only send one data at a time, and wheneve the data not received then we not able to send the new data into that CHANNEL.
+	// So there we called NON-BUFFER CHANNEL
 
-		// In earlier CHANNEL form 1 to 5, the condition is when we only send one data at a time, and wheneve the data not received then we not able to send the new data into that CHANNEL.
-
-		// So there we called NON-BUFFER CHANNEL
-
-		// Now Buffer CHANNEL
+	// Now Buffer CHANNEL
 	// In Buffer channel we can send limited amoun of data without blocking.
 
 	// Suppose we can create a channel for email system
 
 	emailChan := make(chan string, 100)
-		emailDone := make(chan bool)
+	emailDone := make(chan bool)
 
 	go emailSender(emailChan, emailDone)
-
-		/*
+	/*
 		Here we write 100 that means in buffer we have a space of sending 100 items.
 		So, up to 100 this will work and no DEADLOCK happen. But if we increase the value form more than 100 then it start the DEADLOCK.
 	*/
@@ -123,13 +120,12 @@ func main() {
 	// fmt.Println(<-emailChan)
 	// fmt.Println(<-emailChan)
 
-		for i := 0; i < 100; i++ {
-
-			emailChan <- fmt.Sprintf("%d@gmail.com", i)
-				}
+	for i := 0; i < 100; i++ {
+		emailChan <- fmt.Sprintf("%d@gmail.com", i)
+	}
 
 	fmt.Println("done sending...")
 
-		<-emailDone
-	
+	<-emailDone
+
 }
