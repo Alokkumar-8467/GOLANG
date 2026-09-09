@@ -73,5 +73,7 @@ func main() {
 
 	res := <-result
 
+		fmt.Println(res)
+
 	
 }
