@@ -141,5 +141,7 @@ func main() {
 	go func() {
 		chan2 <- "GOLANG"
 	}()
+
+	for i := 0; i < 2; i++ {
 	
 }
