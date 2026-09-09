@@ -83,6 +83,7 @@ func main() {
 
 	done := make(chan bool)
 	go task(done)
-	<-done // here program comes and block. Basically here function ends.
+	<-done 
+	// here program comes and block. Basically here function ends.
 
 }
