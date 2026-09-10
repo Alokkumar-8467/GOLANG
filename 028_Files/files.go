@@ -121,7 +121,13 @@ func main() {
 
 	fmt.Println("Read file data by ReadFile Method = ", string(f2))
 
-	
+		// Output = Read file data by ReadFile Method =  Hello GOLANG
+
+	// 2.3 What if we have Big File How we Read it.
+	// For that we use STREAMING method in GOLANG
+	// We discuss this method in future.
+	//  ****************************************
+
 
 	
 
