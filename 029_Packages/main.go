@@ -6,13 +6,10 @@ import (
 	"github.com/alok/podcast/auth"
 )
 
-
 // go mod init github.com/alok/podcast
 
-
 func main() {
-
-		auth.LoginWithCredentials("alok", "kola")
+	auth.LoginWithCredentials("alok", "kola")
 	session := auth.GetSession()
 	fmt.Println(session)
 }
