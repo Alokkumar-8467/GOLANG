@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-package main
 
-import (
-	"fmt"
+	"github.com/alok/podcast/auth"
+)
