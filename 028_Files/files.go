@@ -160,6 +160,13 @@ func main() {
 
 	// 4.1 Now How to replace the new Text with another ****************************************
 
+	// 5 Now How to transfer one file data to another by using STREAMING method ****************************************
+	// Baiscally Transfer data from eample to example2
+
+	sourceFile, err := os.Open("example.txt")
+	if err != nil {
+		panic(err)
+	}
 
 
 
