@@ -23,3 +23,8 @@ func (p *post) inc(wg *sync.WaitGroup) {
 		p.mu.Unlock()
 		wg.Done()
 	}()
+	// Here modification happen so, we use mutex lock here for views value
+	p.mu.Lock()
+	p.views += 1
+	// after this p.iews += 1 the operation complete. So, now views resource should be unlock
+	// p.mu.Unlock()
