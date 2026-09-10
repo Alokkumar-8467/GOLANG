@@ -81,6 +81,14 @@ func main() {
 
 	buf := make([]byte, fileInfo.Size())
 
+		d, err := f.Read(buf)
+	if err != nil {
+		panic(err)
+	}
+
+	for i := 0; i < len(buf); i++ {
+		fmt.Println("Data from file read = ", d, string(buf[i]))
+	}
 
 }
 
