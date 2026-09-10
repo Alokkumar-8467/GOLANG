@@ -19,3 +19,7 @@ type post struct {
 }
 
 func (p *post) inc(wg *sync.WaitGroup) {
+	defer func() {
+		p.mu.Unlock()
+		wg.Done()
+	}()
