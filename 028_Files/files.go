@@ -218,6 +218,11 @@ func main() {
 
 
 
+	// er := os.Remove("example2.txt")
+	// if er != nil {
+	// 	panic(er)
+	// }
+	// fmt.Println("File Deleted Succesfully...")
 
 	
 
