@@ -105,7 +105,12 @@ func main() {
 	Data from file read =  12 G
 	*/
 
-	
+		// 2.2 File Read by ReadFile method ****************************************
+
+	f2, err := os.ReadFile("example.txt")
+	if err != nil {
+		panic(err)
+	}
 	
 
 	
