@@ -128,7 +128,14 @@ func main() {
 	// We discuss this method in future.
 	//  ****************************************
 
-
+	// 3 Folder Read ****************************************
+	// dir, err := os.Open(".")
+	// this is current directory
+	dir, err := os.Open("../")
+	// this is one previous directory
+	if err != nil {
+		panic(err)
+	}
 	
 
 }
