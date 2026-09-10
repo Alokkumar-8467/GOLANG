@@ -112,13 +112,11 @@ func main() {
 
 	// 2.2 File Read by ReadFile method ****************************************
 
+	// We don't use ReadFile everytime because it load all content of that file once at a time in memory.
+	// If file is small then it is OK but of large file then that file occupy more space in menory and that create a problem for application as well as machine.
 	f2, err := os.ReadFile("example.txt")
 	if err != nil {
 		panic(err)
 	}
-
-	fmt.Println("Read file data by ReadFile Method = ", string(f2))
-
-	// Output = Read file data by ReadFile Method =  Hello GOLANG
 
 }
