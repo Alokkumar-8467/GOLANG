@@ -192,7 +192,17 @@ func main() {
 		}
 
 
+		error := writer.WriteByte(b)
+		if err != nil {
+			panic(error)
+		}
+	}
 
+
+
+
+
+	
 
 
 
