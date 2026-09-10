@@ -39,3 +39,8 @@ func (p *post) inc(wg *sync.WaitGroup) {
 		// Sometime MUTEX careate a bottleNeck situation.
 
 }
+
+func main() {
+
+	var wg sync.WaitGroup
+
