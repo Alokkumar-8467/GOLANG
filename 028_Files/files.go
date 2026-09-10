@@ -136,6 +136,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	
+		defer dir.Close()
+
+	folderInfo, err := dir.ReadDir(-1)
+
+	for _, fi := range folderInfo {
+		fmt.Println(fi.Name(), fi.IsDir())
+	}
 
 }
