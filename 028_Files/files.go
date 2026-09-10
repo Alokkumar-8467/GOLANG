@@ -31,3 +31,7 @@ func main() {
 		f.Read()
 		f.ReadAt()
 	*/
+	/*
+		Now take f.Stat(), same it takes os.FileInfo, and error.
+	*/
+	
