@@ -54,4 +54,20 @@ func main() {
 
 	fmt.Println(myPost.views)
 
+		/*
+		If we see the output we notice that sometime 100 then 99 then 67 the 89 so that views resource is use my many processors and they make changes in them that why we get our outpi]ut like this.
+
+		Due to goRoutines and concurrency the views filed value modify multiple at sametime.
+		So we get like this value.
+		This condition is konwn as RAISE CONDITION.
+
+		PS C:\Users\ALOK\Desktop\GO\GOLANG\027_Mutex> go run main.go
+		100
+		PS C:\Users\ALOK\Desktop\GO\GOLANG\027_Mutex> go run main.go
+		99
+		PS C:\Users\ALOK\Desktop\GO\GOLANG\027_Mutex>
+		PS C:\Users\ALOK\Desktop\GO\GOLANG\027_Mutex> go run main.go
+		100
+	*/
+
 
