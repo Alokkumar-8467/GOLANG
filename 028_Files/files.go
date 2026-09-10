@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 )
@@ -121,7 +122,7 @@ func main() {
 
 	fmt.Println("Read file data by ReadFile Method = ", string(f2))
 
-		// Output = Read file data by ReadFile Method =  Hello GOLANG
+	// Output = Read file data by ReadFile Method =  Hello GOLANG
 
 	// 2.3 What if we have Big File How we Read it.
 	// For that we use STREAMING method in GOLANG
@@ -136,7 +137,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-		defer dir.Close()
+
+	defer dir.Close()
 
 	folderInfo, err := dir.ReadDir(-1)
 
@@ -144,7 +146,7 @@ func main() {
 		fmt.Println(fi.Name(), fi.IsDir())
 	}
 
-		// 4. Create a File ****************************************
+	// 4. Create a File ****************************************
 
 	f4, err := os.Create("example2.txt")
 	if err != nil {
@@ -174,6 +176,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
 	defer destFile.Close()
 
 	// For Using STREAMING FASHION, We have a inbuild package bufIo
@@ -191,32 +194,22 @@ func main() {
 			break
 		}
 
-
 		error := writer.WriteByte(b)
 		if err != nil {
 			panic(error)
 		}
 	}
 
-
-
-
-
-	
 	// At end after this loop, If any data left we flush the data.
 	// So we use writer.Flush()
-
 
 	writer.Flush()
 
 	fmt.Println("Writting to new file Succesfully.")
 
-
-			// 6. Now How to Copy one file data to another file ****************************************
+	// 6. Now How to Copy one file data to another file ****************************************
 
 	// 7. How to Delete a file
-
-
 
 	// er := os.Remove("example2.txt")
 	// if er != nil {
@@ -224,9 +217,4 @@ func main() {
 	// }
 	// fmt.Println("File Deleted Succesfully...")
 
-	
-
-
-
-	
 }
