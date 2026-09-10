@@ -11,3 +11,6 @@ import (
 
 
 func main() {
+
+		auth.LoginWithCredentials("alok", "kola")
+	session := auth.GetSession()
