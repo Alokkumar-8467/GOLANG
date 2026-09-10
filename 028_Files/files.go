@@ -112,8 +112,8 @@ func main() {
 		panic(err)
 	}
 	
+	fmt.Println("Read file data by ReadFile Method = ", string(f2))
 
-	
+	// Output = Read file data by ReadFile Method =  Hello GOLANG
+
 }
-
-	
