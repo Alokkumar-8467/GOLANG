@@ -50,4 +50,8 @@ func main() {
 		go myPost.inc(&wg)
 	}
 
+		wg.Wait()
+
+	fmt.Println(myPost.views)
+
 
