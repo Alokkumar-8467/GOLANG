@@ -144,4 +144,11 @@ func main() {
 		fmt.Println(fi.Name(), fi.IsDir())
 	}
 
+		// 4. Create a File ****************************************
+
+	f4, err := os.Create("example2.txt")
+	if err != nil {
+		panic(err)
+	}
+
 }
