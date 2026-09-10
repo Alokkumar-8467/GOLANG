@@ -65,7 +65,12 @@ func main() {
 	
 	// 2. File Read ****************************************
 
-	
+		// 2.1 File Read by classical way ****************************************
+
+	f1, err := os.Open("example.txt")
+	if err != nil {
+		panic(err)
+	}
 
 }
 
