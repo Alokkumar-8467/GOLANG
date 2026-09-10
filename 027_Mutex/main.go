@@ -69,5 +69,9 @@ func main() {
 		PS C:\Users\ALOK\Desktop\GO\GOLANG\027_Mutex> go run main.go
 		100
 	*/
+	// To Resolve this problem we use Mutex when we use goRoutines and want many processors to process a single resources multiple times.
+	// In MUTEX when that particular resource is in USE then we LOCK that resource so that no other processor use that resource and manuplate the values.
+
+}
 
 
