@@ -75,6 +75,12 @@ func main() {
 		// When we open a file, it must need to be closed.
 	defer f1.Close()
 
+	
+	// Now read the file content.
+	// So basically when we read any file we need to store that file data into buffer. And buffer is Array of bytes.
+
+	buf := make([]byte, fileInfo.Size())
+
 
 }
 
