@@ -34,4 +34,8 @@ func main() {
 	/*
 		Now take f.Stat(), same it takes os.FileInfo, and error.
 	*/
-	
+
+		fileInfo, err := f.Stat()
+	// again same for this also.
+	// Now i go when error comes we need to handle it or return it, we can't thow that error in GOLANG
+	// So,
