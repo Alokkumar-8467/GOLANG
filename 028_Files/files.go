@@ -90,6 +90,25 @@ func main() {
 		fmt.Println("Data from file read = ", d, string(buf[i]))
 	}
 
+	/* Output =
+	Data from file read =  12 H
+	Data from file read =  12 e
+	Data from file read =  12 l
+	Data from file read =  12 l
+	Data from file read =  12 o
+	Data from file read =  12
+	Data from file read =  12 G
+	Data from file read =  12 O
+	Data from file read =  12 L
+	Data from file read =  12 A
+	Data from file read =  12 N
+	Data from file read =  12 G
+	*/
+
+	
+	
+
+	
 }
 
 	
