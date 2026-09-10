@@ -174,6 +174,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	defer destFile.Close()
+
+	// For Using STREAMING FASHION, We have a inbuild package bufIo
+
+	reader := bufio.NewReader(sourceFile)
+	writer := bufio.NewWriter(destFile)
 
 
 
