@@ -46,3 +46,10 @@ func main() {
 		// Panic the Program
 		panic(err)
 	}
+
+		// Same with fileInfo, we have various methods with file info like
+	/*
+		fileInfo.Name()
+		fileInfo.Mode()
+		fileInfo.Size()
+	*/
