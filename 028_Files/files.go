@@ -150,5 +150,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	defer f4.Close()
+
+	f4.WriteString("Hi this is GOLANG file")
+
+	// If we run the same line f4.WriteString("Hi this is GOLANG file") then it bydefault APPEND means add then new item into the older one.
 
 }
