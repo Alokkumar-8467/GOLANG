@@ -13,3 +13,12 @@ func main() {
 	// It return two things.
 	// 1. File-Object which is pointer
 	// 2. error
+
+		// Now i go when error comes we need to handle it or return it, we can't thow that error in GOLANG
+	// So,
+	if err != nil {
+		// Log the error
+
+		// Panic the Program
+		panic(err)
+	}
