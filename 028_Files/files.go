@@ -60,3 +60,11 @@ func main() {
 	fmt.Println("", fileInfo.Sys())
 	fmt.Println("File or Folder = ", fileInfo.IsDir())
 	fmt.Println("File Permissions = ", fileInfo.Mode())
+
+
+	
+	// 2. File Read **********
+
+}
+
+	
