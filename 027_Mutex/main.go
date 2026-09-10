@@ -36,3 +36,6 @@ func (p *post) inc(wg *sync.WaitGroup) {
 
 		// Never Lock the Whole function or logic by MUTEX, it's a bad practice
 	// Only lock that particular line that perform modification.
+		// Sometime MUTEX careate a bottleNeck situation.
+
+}
