@@ -212,7 +212,14 @@ func main() {
 	fmt.Println("Writting to new file Succesfully.")
 
 
-		
+			// 6. Now How to Copy one file data to another file ****************************************
+
+	// 7. How to Delete a file
+
+
+
+
+	
 
 
 
