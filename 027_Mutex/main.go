@@ -17,3 +17,5 @@ type post struct {
 	// Here we add mutex in views resource.
 	mu sync.Mutex
 }
+
+func (p *post) inc(wg *sync.WaitGroup) {
