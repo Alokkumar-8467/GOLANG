@@ -181,7 +181,23 @@ func main() {
 	reader := bufio.NewReader(sourceFile)
 	writer := bufio.NewWriter(destFile)
 
+	for {
+		b, err := reader.ReadByte()
 
+		if err != nil {
+			if err.Error() != "EOF" {
+				panic(err)
+			}
+			break
+		}
+
+
+
+
+
+
+
+		
 
 
 
