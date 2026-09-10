@@ -207,6 +207,9 @@ func main() {
 	// So we use writer.Flush()
 
 
+	writer.Flush()
+
+	fmt.Println("Writting to new file Succesfully.")
 
 
 		
