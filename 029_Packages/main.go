@@ -8,3 +8,6 @@ import (
 
 
 // go mod init github.com/alok/podcast
+
+
+func main() {
