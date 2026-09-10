@@ -168,7 +168,12 @@ func main() {
 		panic(err)
 	}
 
+	defer sourceFile.Close()
 
+	destFile, err := os.Create("example3.txt")
+	if err != nil {
+		panic(err)
+	}
 
 
 
