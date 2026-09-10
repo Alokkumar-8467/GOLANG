@@ -39,3 +39,10 @@ func main() {
 	// again same for this also.
 	// Now i go when error comes we need to handle it or return it, we can't thow that error in GOLANG
 	// So,
+
+		if err != nil {
+		// Log the error
+
+		// Panic the Program
+		panic(err)
+	}
