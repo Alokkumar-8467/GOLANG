@@ -28,3 +28,5 @@ func (p *post) inc(wg *sync.WaitGroup) {
 	p.views += 1
 	// after this p.iews += 1 the operation complete. So, now views resource should be unlock
 	// p.mu.Unlock()
+
+		// we can write Unlock() below this resource but what happen if that resource get any kind of error, then this task never complete and our VIEWS resource STUCK in LOCK for lifetime.
