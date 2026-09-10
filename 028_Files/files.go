@@ -72,6 +72,10 @@ func main() {
 		panic(err)
 	}
 
+		// When we open a file, it must need to be closed.
+	defer f1.Close()
+
+
 }
 
 	
