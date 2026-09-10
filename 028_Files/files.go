@@ -53,3 +53,10 @@ func main() {
 		fileInfo.Mode()
 		fileInfo.Size()
 	*/
+
+		fmt.Println("FileName = ", fileInfo.Name())
+	fmt.Println("FileSize = ", fileInfo.Size())
+	fmt.Println("File Modified Time Last Time = ", fileInfo.ModTime())
+	fmt.Println("", fileInfo.Sys())
+	fmt.Println("File or Folder = ", fileInfo.IsDir())
+	fmt.Println("File Permissions = ", fileInfo.Mode())
