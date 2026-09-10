@@ -22,3 +22,12 @@ func main() {
 		// Panic the Program
 		panic(err)
 	}
+
+		// We handle the error Now file_Object turn
+	// In file we have lots of options to use like
+	/*
+		f.Stat()
+		f.Name()
+		f.Read()
+		f.ReadAt()
+	*/
