@@ -24,3 +24,5 @@ func main() {
 		Email: "john@email.com",
 		Name:  "John Deo",
 	}
+	fmt.Println(user.Email)
+	fmt.Println(user.Name)
