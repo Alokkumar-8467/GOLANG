@@ -10,3 +10,5 @@ require (
 // Now see we use /fatih/color in main but after that it show //indirect here.
 // So to improve this use command `go mod tidy`
 
+
+// After that this `require github.com/fatih/color v1.19.0` move from indirect block.
