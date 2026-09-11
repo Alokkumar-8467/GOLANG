@@ -20,3 +20,7 @@ func main() {
 	auth.LoginWithCredentials("alok", "kola")
 	session := auth.GetSession()
 	fmt.Println("session = ", session)
+	user := user.User{
+		Email: "john@email.com",
+		Name:  "John Deo",
+	}
