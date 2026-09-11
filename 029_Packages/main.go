@@ -26,3 +26,4 @@ func main() {
 	}
 	fmt.Println(user.Email)
 	fmt.Println(user.Name)
+	color.Green(user.Email)
