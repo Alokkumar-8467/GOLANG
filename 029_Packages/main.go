@@ -8,6 +8,7 @@ import (
 	"github.com/fatih/color"
 )
 
+// Command for custom packages
 // go mod init github.com/alok/podcast
 
 func main() {
