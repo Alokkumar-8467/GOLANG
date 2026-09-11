@@ -27,3 +27,7 @@ func main() {
 	fmt.Println(user.Email)
 	fmt.Println(user.Name)
 	color.Green(user.Email)
+
+	// In GOLANG there are various packages but if we want to install third party packages then we can do that also by using thirt part packages library
+
+}
