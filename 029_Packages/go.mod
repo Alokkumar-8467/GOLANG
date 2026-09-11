@@ -7,3 +7,6 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	golang.org/x/sys v0.42.0 // indirect
 )
+// Now see we use /fatih/color in main but after that it show //indirect here.
+// So to improve this use command `go mod tidy`
+
