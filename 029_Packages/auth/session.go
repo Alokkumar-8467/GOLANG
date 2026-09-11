@@ -8,5 +8,5 @@ func extractSession() string {
 
 
 func GetSession() string {
-	return "loggedin"
+	return extractSession()
 }
