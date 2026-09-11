@@ -19,5 +19,4 @@ import (
 func main() {
 	auth.LoginWithCredentials("alok", "kola")
 	session := auth.GetSession()
-	fmt.Println(session)
-}
+	fmt.Println("session = ", session)
