@@ -14,3 +14,4 @@ Now we can use this LoginWithCredentials() anywhere in this project
 func LoginWithCredentials(username string, password string) {
 	fmt.Println("Login user using", username, password)
 }
+
