@@ -12,3 +12,10 @@ func sum(nums ...int) int {
 	}
 	return total
 }
+
+// If we want to make a function that take any Data Type then we need to use ...any or ...interface.
+
+func anyType(nums ...any) int {
+	fmt.Println(nums...)
+	return len(nums)
+}
