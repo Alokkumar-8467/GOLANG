@@ -9,4 +9,9 @@ type User struct {
 }
 func main() {
 
-}
+	u1 := User{
+		ID:    11,
+		Name:  "Alok",
+		Email: "alok@gmail.com",
+		Age:   25,
+	}
