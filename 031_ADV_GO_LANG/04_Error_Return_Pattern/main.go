@@ -29,3 +29,7 @@ func run() error {
 	return nil
 
 }
+func parseLevel(s string) (int, error) {
+	// (value, error)
+	// if nil error -> success
+	// if not nil -> failure
