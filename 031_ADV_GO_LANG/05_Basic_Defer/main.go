@@ -22,3 +22,10 @@ func doWork(success bool) error {
 	// resource related
 	// start message -> resource acquired
 	// cleanup message -> resource released
+
+
+		fmt.Println("start: resource acquired")
+
+	// this defer will guranntee this runs at the end of the func
+	// it return both the path at success as well as for errors.
+	defer fmt.Println("cleanup: resource released")
