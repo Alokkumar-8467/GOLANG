@@ -18,3 +18,10 @@ func main() {
 	}
 
 }
+func run() error {
+
+	input := "3"
+	level, err := parseLevel(input)
+	if err != nil {
+		return err
+	}
