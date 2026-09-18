@@ -16,3 +16,9 @@ func main() {
 	
 
 }
+
+
+func doWork(success bool) error {
+	// resource related
+	// start message -> resource acquired
+	// cleanup message -> resource released
