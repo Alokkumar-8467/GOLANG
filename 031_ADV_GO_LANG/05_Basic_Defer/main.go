@@ -36,3 +36,7 @@ func doWork(success bool) error {
 
 		fmt.Println("work: doing something imp")
 	fmt.Println("work: this work is done")
+
+		return nil
+
+}
