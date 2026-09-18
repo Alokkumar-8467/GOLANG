@@ -33,3 +33,16 @@ func parseLevel(s string) (int, error) {
 	// (value, error)
 	// if nil error -> success
 	// if not nil -> failure
+	// pattern
+	n, err := strconv.Atoi(s)
+	if err != nil {
+		return 0, fmt.Errorf("Level Must be a number")
+	}
+
+	if n < 1 || n > 5 {
+		return 0, fmt.Errorf("Level must be 1 and 5")
+	}
+
+	return n, nil
+
+}
