@@ -1,1 +1,9 @@
-package structs
+package main
+
+type User struct{
+	
+}
+
+func main() {
+
+}
