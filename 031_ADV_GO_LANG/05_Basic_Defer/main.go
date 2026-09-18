@@ -33,3 +33,6 @@ func doWork(success bool) error {
 		if !success {
 		return errors.New("Something went wrong. i am returning early.")
 	}
+
+		fmt.Println("work: doing something imp")
+	fmt.Println("work: this work is done")
