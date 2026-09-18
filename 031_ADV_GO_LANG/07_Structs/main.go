@@ -43,4 +43,10 @@ func main() {
 
 	// Output = Struct value after mutation {11 Alok alok@gmail.com 400}
 
+		// We can also do partial user in GOLANG
+
+	u2 := User{
+		Name: "John",
+	}
+
 }
