@@ -25,3 +25,7 @@ func run() error {
 	if err != nil {
 		return err
 	}
+	fmt.Println("Selected level", level)
+	return nil
+
+}
