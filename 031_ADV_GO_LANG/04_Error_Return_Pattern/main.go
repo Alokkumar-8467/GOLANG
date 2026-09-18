@@ -5,3 +5,16 @@ import (
 	"log"
 	"strconv"
 )
+func main() {
+
+	// GO don't use exceptions for normal failures
+	// In Go Functions return errors as normal values.
+
+	// Value, err := something ()
+	// if err != nil {handle the error}
+
+	if err := run(); err != nil {
+		log.Fatal(err)
+	}
+
+}
