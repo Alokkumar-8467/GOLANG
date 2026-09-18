@@ -6,4 +6,6 @@ func main() {
 
 	// &x -> address of x (makes a pointer)
 
+	// *p -> dereferencing (go to that address and read.write)
+
 }
