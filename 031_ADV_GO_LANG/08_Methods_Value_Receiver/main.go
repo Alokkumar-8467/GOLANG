@@ -42,3 +42,16 @@ Intro(u)
 The method version has the same effect. Go just lets you write u.Intro() instead.
 
 Correction 2: it doesn't return u.Name
+
+It returns a new string, with the name inserted into it:
+
+go
+return fmt.Sprintf("Hi, I am %s", u.Name)
+Code	Result
+u.Name	"Alok"
+What Intro returns	"Hi, I am Alok"
+
+%s is a placeholder that Sprintf replaces with u.Name.
+
+"Method value" is also a specific Go term. It means writing u.Intro without the (), which gives you the method itself as a function. What Intro returns is just a string.
+
