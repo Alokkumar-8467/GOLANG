@@ -15,3 +15,7 @@ func main() {
 	fmt.Println("After Methods Pointer Receiver", u.Age)
 
 }
+
+func (u *User) Birthday() {
+	u.Age++
+}
