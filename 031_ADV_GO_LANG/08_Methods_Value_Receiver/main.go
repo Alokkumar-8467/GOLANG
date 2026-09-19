@@ -17,3 +17,12 @@ func main() {
 func (u User) Intro() string {
 	return fmt.Sprintf("Hi, I am %s", u.Name)
 }
+
+/*
+You're mostly right, with two small corrections.
+
+What's right
+Intro is a method.
+User is the struct type.
+The user is handed to the method, so Intro can use its data.
+Correction 1: the receiver is not a normal input
