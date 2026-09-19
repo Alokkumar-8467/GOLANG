@@ -13,3 +13,5 @@ func normalizeName(name string) string {
 	if n == "" {
 		return "Guest"
 	}
+	return strings.ToUpper(n)
+}
