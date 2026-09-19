@@ -7,5 +7,11 @@ type User struct {
 }
 
 func main() {
+	u := User{Name: "Alok", Age: 24}
+	fmt.Println("Before Methods Pointer Receiver", u.Age)
+
+	u.Birthday()
+
+	fmt.Println("After Methods Pointer Receiver", u.Age)
 
 }
