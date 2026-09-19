@@ -55,3 +55,18 @@ What Intro returns	"Hi, I am Alok"
 
 "Method value" is also a specific Go term. It means writing u.Intro without the (), which gives you the method itself as a function. What Intro returns is just a string.
 
+
+Summary
+go
+func (u User) Intro() string {
+//   ^^^^^^^^ receiver: the user the method is called on
+//            ^^^^^ method name
+//                    ^^^^^^ return type: text
+	return fmt.Sprintf("Hi, I am %s", u.Name)
+}
+
+Intro is a method on User that takes the user's name and returns the text "Hi, I am <name>".
+*/
+
+
+
