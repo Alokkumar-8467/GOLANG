@@ -7,3 +7,9 @@ func Hello(name string) string {
 
 	return "Hello," + clean
 }
+func normalizeName(name string) string {
+	n := strings.TrimSpace(name)
+
+	if n == "" {
+		return "Guest"
+	}
