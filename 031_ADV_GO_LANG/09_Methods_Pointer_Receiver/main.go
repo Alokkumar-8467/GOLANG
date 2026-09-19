@@ -1,12 +1,14 @@
 package main
 
 import "fmt"
+
 type User struct {
 	Name string
 	Age  int
 }
 
 func main() {
+
 	u := User{Name: "Alok", Age: 24}
 	fmt.Println("Before Methods Pointer Receiver", u.Age)
 
