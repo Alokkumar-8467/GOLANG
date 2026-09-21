@@ -5,13 +5,19 @@ import (
 	"net/http"
 )
 
-func helloHandler(w http.ResponseWriter, r *http.Response){
-	r.Method  != http.MethodGet {
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+
+	// Restricting HTTP Methods. This checks that the request must matched with the given required.
+	// For GET accept only GET
+	// For POST accept only POST
+	// For PATCH accept only PATCH
+	if r.Method != http.MethodGet {
 		http.Error(w, "only Get is allowed", http.StatusMethodNotAllowed)
 		return
 	}
 
-	_, _ = w.write([]byte("Hello from GO net/http server"))
+	// This return a response for this request.
+	_, _ = w.Write([]byte("Hello from GO net/http server"))
 
 }
 
@@ -25,6 +31,6 @@ func main() {
 
 	err := http.ListenAndServe(":8080", nil)
 
-	fmt.Println(err)
+	fmt.Println("Server error:", err)
 
 }
