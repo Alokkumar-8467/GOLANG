@@ -13,6 +13,13 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 }
 
 
+func testHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+
+	}
+}
+
+
 func main(){
 	
 }
