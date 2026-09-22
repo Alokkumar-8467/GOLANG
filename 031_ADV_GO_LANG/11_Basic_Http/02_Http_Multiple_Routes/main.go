@@ -17,6 +17,10 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 
 func main() {
+	
+	http.HandleFunc("/", rootHandler)
+	http.HandleFunc("/hello", helloHandler)
+
 
 	err := http.ListenAndServe()
 
