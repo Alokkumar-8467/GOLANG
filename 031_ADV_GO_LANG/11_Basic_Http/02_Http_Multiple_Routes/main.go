@@ -12,6 +12,9 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	if name == "" {
 		name = "Guest"
 	}
+		_, _ = w.Write([]byte(name))
+}
+
 
 func main() {
 
