@@ -19,7 +19,11 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func main() {
 
-func main(){
-	
+	http.HandleFunc("/test", testHandler)
+
+	err := http.ListenAndServe(":5000", nil)
+	fmt.Println(err)
+
 }
