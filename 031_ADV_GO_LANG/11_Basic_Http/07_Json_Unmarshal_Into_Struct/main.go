@@ -1,5 +1,11 @@
 package main
 
+type CatFactResponse struct {
+	Fact   string `json:"fact"`
+	Length int    `json:"length"`
+}
+
+
 func main() {
 
   	url := "https://catfact.ninja/fact"
