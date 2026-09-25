@@ -18,6 +18,10 @@ func writeJSON(w http.ResponseWriter, r *http.Request) {
 }
 
 
+func externalHandler(w http.ResponseWriter, r *http.Request) {
+
+}
+
 func main() {
 
 }
