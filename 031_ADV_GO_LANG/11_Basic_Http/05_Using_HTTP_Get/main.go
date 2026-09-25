@@ -18,3 +18,4 @@ func main() {
 
 	fmt.Println("Status code", resp.StatusCode)
 	fmt.Println("Status code", resp.Status)
+}
