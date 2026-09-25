@@ -13,6 +13,9 @@ type CatFactResponse struct {
 }
 
 
+func writeJSON(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+}
 
 
 func main() {
