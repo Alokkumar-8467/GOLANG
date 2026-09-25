@@ -23,6 +23,11 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 func fetchCatFact() (CatFactResponse, error) {
 	url := "https://catfact.ninja/fact"
 
+		res, err := http.Get(url)
+	if err != nil {
+		return CatFactResponse{}, err
+	}
+	
 
 
 func externalHandler(w http.ResponseWriter, r *http.Request) {
