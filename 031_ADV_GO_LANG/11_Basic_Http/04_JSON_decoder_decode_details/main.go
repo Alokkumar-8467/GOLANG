@@ -82,6 +82,18 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 
 	*/
 
+		// Rought way to handle decode value
+
+	err := dec.Decode(&req)
+
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{
+			"ok":    "false",
+			"error": "Json format not correct",
+		})
+		return
+	}
+
 	if err := dec.Decode(&req); err != nil {
 		writeJSON(w, http.StatusBadRequest, map[string]any{
 			"ok":    "false",
