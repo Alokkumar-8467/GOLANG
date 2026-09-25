@@ -37,6 +37,14 @@ func fetchCatFact() (CatFactResponse, error) {
 	if err != nil {
 		return CatFactResponse{}, err
 	}
+
+		var data CatFactResponse
+	if err := json.Unmarshal(bodyBytes, &data); err != nil {
+		return CatFactResponse{}, err
+	}
+	return data, nil
+
+}
 	
 
 
