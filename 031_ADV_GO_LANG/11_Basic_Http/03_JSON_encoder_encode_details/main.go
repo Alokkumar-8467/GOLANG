@@ -19,6 +19,7 @@ func successHandler(w http.ResponseWriter, r *http.Request) {
 		"datetime": time.Now().UTC(),
 	}
 	_ = json.NewEncoder(w).Encode(res)
+	
 }
 
 func main() {
