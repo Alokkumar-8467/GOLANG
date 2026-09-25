@@ -26,5 +26,9 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-		
+			bodyText := string(bodyBytes)
+
+	fmt.Println(bodyText)
+
 }
+
