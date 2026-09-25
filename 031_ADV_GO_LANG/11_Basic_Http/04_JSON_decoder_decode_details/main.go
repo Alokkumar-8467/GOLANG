@@ -106,6 +106,14 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 	// Just to remove the extra space from the name string.
 	req.Name = strings.TrimSpace(req.Name)
 
+		// Now validation check
+	if req.Name == "" {
+		writeJSON(w, http.StatusBadRequest, map[string]any{
+			"ok":    "false",
+			"error": "Name must not be empty",
+		})
+		return
+	}
 
 	if err := dec.Decode(&req); err != nil {
 		writeJSON(w, http.StatusBadRequest, map[string]any{
