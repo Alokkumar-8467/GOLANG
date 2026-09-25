@@ -33,7 +33,10 @@ func fetchCatFact() (CatFactResponse, error) {
 	if res.StatusCode != http.StatusOK {
 		return CatFactResponse{}, fmt.Errorf("external api failed: %s", res.Status)
 	}
-
+	bodyBytes, err := io.ReadAll(res.Body)
+	if err != nil {
+		return CatFactResponse{}, err
+	}
 	
 
 
