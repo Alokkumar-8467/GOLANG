@@ -5,10 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	"strings"
-	
 	"time"
 )
-kolakola
 
 func writeJSON(w http.ResponseWriter, status int, data any) {
 
