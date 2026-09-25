@@ -8,9 +8,9 @@ import (
 	"time"
 )
 
-
 func writeJSON(w http.ResponseWriter, status int, data any) {
-		/*
+
+	/*
 	   The response we send back (w) needs a "Content-Type" header, so the
 	   client knows the body is JSON and can parse it correctly.
 
@@ -22,7 +22,8 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 	   So the two steps combined into one line:
 	       w.Header().Set("Content-Type", "application/json")
 	*/
-		w.Header().Set("Content-Type", "application/json")
+
+	w.Header().Set("Content-Type", "application/json")
 
 	/* `w.WriteHeader(status)`
 	This does two things at once, and both matter:
@@ -32,7 +33,7 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 	w.Header().Set("Content-Type", "application/json")   // staged, not sent yet
 	w.WriteHeader(status)                                  // ← NOW it's actually sent
 	*/
-		w.WriteHeader(status)
+	w.WriteHeader(status)
 	/*
 		1. json.NewEncoder(w)
 		This creates a new Encoder object, plumbed to write into w (your response). Just like NewDecoder didn't read anything by itself, NewEncoder doesn't write anything by itself yet — it just sets up the tool, connected to its destination (w, in this case, instead of r.Body).
@@ -44,6 +45,7 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 		_ is Go's blank identifier. It means: "a value exists here, but I don't want it — throw it away."
 
 	*/
+
 	_ = json.NewEncoder(w).Encode(data)
 }
 
@@ -82,7 +84,7 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 
 	*/
 
-		// Rought way to handle decode value
+	// Rought way to handle decode value
 
 	err := dec.Decode(&req)
 
@@ -93,8 +95,7 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-
-		// Optmized way to handle decode value
+	// Optmized way to handle decode value
 	// if err := dec.Decode(&req); err != nil {
 	// 	writeJSON(w, http.StatusBadRequest, map[string]any{
 	// 		"ok":    "false",
@@ -106,26 +107,7 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 	// Just to remove the extra space from the name string.
 	req.Name = strings.TrimSpace(req.Name)
 
-		// Now validation check
-	if req.Name == "" {
-		writeJSON(w, http.StatusBadRequest, map[string]any{
-			"ok":    "false",
-			"error": "Name must not be empty",
-		})
-		return
-	}
-
-	if err := dec.Decode(&req); err != nil {
-		writeJSON(w, http.StatusBadRequest, map[string]any{
-			"ok":    "false",
-			"error": "Invalid json format",
-		})
-		return
-	}
-
 	// Now validation check
-	req.Name = strings.TrimSpace(req.Name)
-
 	if req.Name == "" {
 		writeJSON(w, http.StatusBadRequest, map[string]any{
 			"ok":    "false",
@@ -133,8 +115,7 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-
-		if req.Age <= 0 {
+	if req.Age <= 0 {
 		writeJSON(w, http.StatusBadRequest, map[string]any{
 			"ok":    "false",
 			"error": "Age must be required",
@@ -158,3 +139,38 @@ func main() {
 	fmt.Println(err)
 
 }
+
+/*
+
+When we test this url `http://localhost:5000/test`
+
+1. If we not pass or post anything then we get this error.
+ {
+    "error": "Invalid json format",
+    "ok": "false"
+}
+
+2. If we pass other method then POST then we get this error.
+{
+    "error": "Only post is allowed",
+    "ok": "false"
+}
+
+3. If we post empty body then we get this error.
+{
+    "error": "Name must not be empty",
+    "ok": "false"
+}
+
+4. If we post evetything correct then we get this Output.
+
+{
+    "Ok": "true",
+    "data": {
+        "name": "alok"
+    },
+    "timeStamp": "2026-09-25T04:16:35.8374135Z"
+}
+
+
+*/
