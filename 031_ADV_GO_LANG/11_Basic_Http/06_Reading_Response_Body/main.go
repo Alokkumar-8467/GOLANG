@@ -20,5 +20,11 @@ func main() {
 		fmt.Println(resp.Status)
 		return
 	}
+
+		bodyBytes, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 		
 }
