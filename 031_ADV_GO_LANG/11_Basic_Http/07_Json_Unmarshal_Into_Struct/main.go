@@ -1,6 +1,5 @@
 package main
 
-
 import (
 	"encoding/json"
 	"fmt"
@@ -13,10 +12,8 @@ type CatFactResponse struct {
 	Length int    `json:"length"`
 }
 
-
 func main() {
-
-  	url := "https://catfact.ninja/fact"
+	url := "https://catfact.ninja/fact"
 
 	resp, err := http.Get(url)
 	if err != nil {
@@ -24,17 +21,14 @@ func main() {
 		return
 	}
 
-		defer resp.Body.Close()
+	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
 		fmt.Println(resp.Status)
 		return
 	}
 
-
-
-
-		// It convert JSON BYTES in GO Structs
+	// It convert JSON BYTES in GO Structs
 	bodyBytes, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println("read body failed", err)
@@ -42,11 +36,16 @@ func main() {
 	}
 
 	var data CatFactResponse
+
 	if err := json.Unmarshal(bodyBytes, &data); err != nil {
 		fmt.Println("Json Unmarshal failed.")
 		return
 	}
 
-	
-  
+	fmt.Println(data.Fact, data.Length)
+
 }
+
+/*
+Output = A cats field of vision is about 185 degrees. 44
+*/
