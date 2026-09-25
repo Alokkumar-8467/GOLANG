@@ -17,5 +17,8 @@ func main() {
 
 		// Here we check the status code, if status code is OK or 200 then proceide otherwise give the error with that status code.
 	if resp.StatusCode != http.StatusOK {
-
+		fmt.Println(resp.Status)
+		return
+	}
+		
 }
