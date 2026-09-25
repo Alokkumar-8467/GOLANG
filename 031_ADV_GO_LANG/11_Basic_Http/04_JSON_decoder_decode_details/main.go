@@ -94,6 +94,19 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+		// Optmized way to handle decode value
+	// if err := dec.Decode(&req); err != nil {
+	// 	writeJSON(w, http.StatusBadRequest, map[string]any{
+	// 		"ok":    "false",
+	// 		"error": "Invalid json format",
+	// 	})
+	// 	return
+	// }
+
+	// Just to remove the extra space from the name string.
+	req.Name = strings.TrimSpace(req.Name)
+
+
 	if err := dec.Decode(&req); err != nil {
 		writeJSON(w, http.StatusBadRequest, map[string]any{
 			"ok":    "false",
