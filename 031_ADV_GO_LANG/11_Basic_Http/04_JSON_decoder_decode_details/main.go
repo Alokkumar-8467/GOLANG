@@ -48,6 +48,7 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 
 type TestRequest struct {
 	Name string `json:"name"`
+	Age  int    `json:"age"`
 }
 
 func testHandler(w http.ResponseWriter, r *http.Request) {
