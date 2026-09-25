@@ -21,7 +21,7 @@ func main() {
 }
 
 
-/* Output
+Output
 Status code 200
 Status code 200 OK
-*/
+
