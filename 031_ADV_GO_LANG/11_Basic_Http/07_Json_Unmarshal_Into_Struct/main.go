@@ -9,5 +9,12 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+
+		defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		fmt.Println(resp.Status)
+		return
+	}
   
 }
