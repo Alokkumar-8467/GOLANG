@@ -134,6 +134,14 @@ func testHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+		if req.Age <= 0 {
+		writeJSON(w, http.StatusBadRequest, map[string]any{
+			"ok":    "false",
+			"error": "Age must be required",
+		})
+		return
+	}
+
 	writeJSON(w, http.StatusOK, map[string]any{
 		"Ok":        "true",
 		"data":      req,
