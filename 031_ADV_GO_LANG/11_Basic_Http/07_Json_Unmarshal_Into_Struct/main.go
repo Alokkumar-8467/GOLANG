@@ -30,5 +30,20 @@ func main() {
 		fmt.Println(resp.Status)
 		return
 	}
+
+
+
+
+		// It convert JSON BYTES in GO Structs
+	bodyBytes, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("read body failed", err)
+		return
+	}
+
+	var data CatFactResponse
+
+
+	
   
 }
