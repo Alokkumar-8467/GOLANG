@@ -27,6 +27,13 @@ func fetchCatFact() (CatFactResponse, error) {
 	if err != nil {
 		return CatFactResponse{}, err
 	}
+
+	defer res.Body.Close()
+
+	if res.StatusCode != http.StatusOK {
+		return CatFactResponse{}, fmt.Errorf("external api failed: %s", res.Status)
+	}
+
 	
 
 
