@@ -20,7 +20,8 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 	_ = json.NewEncoder(w).Encode(data)
 }
 
-
+// This fetchCatFact func take nothing in INPUT but return something
+// Now this function return two things CatFactResponse and error
 func fetchCatFact() (CatFactResponse, error) {
 	url := "https://catfact.ninja/fact"
 
