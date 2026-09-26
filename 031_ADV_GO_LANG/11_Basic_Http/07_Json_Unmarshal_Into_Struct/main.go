@@ -49,10 +49,11 @@ func main() {
 		return
 	}
 
-	if err := json.Unmarshal(bodyBytes, &data); err != nil {
-		fmt.Println("Json Unmarshal failed.")
-		return
-	}
+	// Complex Way
+	// if err := json.Unmarshal(bodyBytes, &data); err != nil {
+	// 	fmt.Println("Json Unmarshal failed.")
+	// 	return
+	// }
 
 	fmt.Println(data.Fact, data.Length)
 
