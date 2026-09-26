@@ -35,14 +35,12 @@ func main() {
 		return
 	}
 
-		// Optional i do for Testing.
+	// Optional i do for Testing.
 	bodyText := string(bodyBytes)
 	fmt.Println("For Testing", bodyText)
 
-
 	var data CatFactResponse
 
-	
 	err = json.Unmarshal(bodyBytes, &data)
 	if err != nil {
 		fmt.Println("Json Unmarshal failed.", err)
