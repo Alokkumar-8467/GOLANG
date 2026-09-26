@@ -57,8 +57,9 @@ func externalHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		writeJSON(w, http.StatusMethodNotAllowed, map[string]any{
 			"ok":    "false",
-			"error": "Only Get Method is allowed.",
+			"error": "Only Get method is allowed.",
 		})
+		return
 	}
 }
 
