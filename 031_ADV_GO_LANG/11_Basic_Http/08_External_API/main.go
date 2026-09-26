@@ -20,6 +20,7 @@ func writeJSON(w http.ResponseWriter, status int, data any) {
 	_ = json.NewEncoder(w).Encode(data)
 }
 
+
 func fetchCatFact() (CatFactResponse, error) {
 	url := "https://catfact.ninja/fact"
 
