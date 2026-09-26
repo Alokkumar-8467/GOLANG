@@ -70,6 +70,16 @@ func externalHandler(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
+
+		writeJSON(w, http.StatusOK, map[string]any{
+		"ok":        "true",
+		"timeStamp": time.Now().UTC(),
+		"external": map[string]any{
+			"source": "Catfact.mimja",
+			"fact":   data.Fact,
+			"length": data.Length,
+		},
+	})
 	
 }
 
