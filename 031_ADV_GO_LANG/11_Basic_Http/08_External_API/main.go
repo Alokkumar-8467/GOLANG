@@ -61,6 +61,16 @@ func externalHandler(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
+
+		data, err := fetchCatFact()
+	if err != nil {
+		writeJSON(w, http.StatusBadRequest, map[string]any{
+			"ok":    "false",
+			"error": "Failed to fetch data.",
+		})
+		return
+	}
+	
 }
 
 func main() {
