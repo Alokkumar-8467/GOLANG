@@ -10,8 +10,9 @@ import (
 
 type CatFactResponse struct {
 	Fact   string `json:"fact"`
-	Lenght string `json:"lenght"`
+	Length string `json:"length"`
 }
+
 
 func writeJSON(w http.ResponseWriter, status int, data any) {
 	w.Header().Set("Content-Type", "application/json")
