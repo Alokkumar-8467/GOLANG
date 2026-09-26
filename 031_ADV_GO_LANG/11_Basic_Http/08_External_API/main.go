@@ -13,7 +13,6 @@ type CatFactResponse struct {
 	Length string `json:"length"`
 }
 
-
 func writeJSON(w http.ResponseWriter, status int, data any) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
@@ -31,8 +30,6 @@ func fetchCatFact() (CatFactResponse, error) {
 		return CatFactResponse{}, err
 		// when error comes then response in CatFactResponse{} is empty stirng we set, have nothing and only err we get right
 	}
-
-	defer res.Body.Close()
 
 	defer res.Body.Close()
 
@@ -62,7 +59,7 @@ func externalHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-		data, err := fetchCatFact()
+	data, err := fetchCatFact()
 	if err != nil {
 		writeJSON(w, http.StatusBadRequest, map[string]any{
 			"ok":    "false",
@@ -71,7 +68,7 @@ func externalHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-		writeJSON(w, http.StatusOK, map[string]any{
+	writeJSON(w, http.StatusOK, map[string]any{
 		"ok":        "true",
 		"timeStamp": time.Now().UTC(),
 		"external": map[string]any{
@@ -80,7 +77,7 @@ func externalHandler(w http.ResponseWriter, r *http.Request) {
 			"length": data.Length,
 		},
 	})
-	
+
 }
 
 func main() {
