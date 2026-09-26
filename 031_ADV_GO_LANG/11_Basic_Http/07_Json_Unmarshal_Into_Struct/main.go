@@ -35,6 +35,11 @@ func main() {
 		return
 	}
 
+		// Optional i do for Testing.
+	bodyText := string(bodyBytes)
+	fmt.Println("For Testing", bodyText)
+
+
 	var data CatFactResponse
 
 	if err := json.Unmarshal(bodyBytes, &data); err != nil {
