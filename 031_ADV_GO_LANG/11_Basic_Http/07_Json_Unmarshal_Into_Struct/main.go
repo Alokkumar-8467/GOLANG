@@ -42,6 +42,13 @@ func main() {
 
 	var data CatFactResponse
 
+	
+	err = json.Unmarshal(bodyBytes, &data)
+	if err != nil {
+		fmt.Println("Json Unmarshal failed.", err)
+		return
+	}
+
 	if err := json.Unmarshal(bodyBytes, &data); err != nil {
 		fmt.Println("Json Unmarshal failed.")
 		return
