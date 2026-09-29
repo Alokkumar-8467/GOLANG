@@ -28,3 +28,11 @@ func Load() (Config, error) {
 	if err != nil {
 		return Config{}, err
 	}
+	port, err := extractEnv("PORT")
+	if err != nil {
+		return Config{}, err
+	}
+
+
+
+	
