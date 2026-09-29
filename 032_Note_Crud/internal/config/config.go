@@ -13,3 +13,10 @@ type Config struct {
 	MongoDB    string
 	ServerPort string
 }
+func Load() (Config, error) {
+
+	// godotenv.Load() reads .env and sets them into the process env
+	// os.getenv -> reads those values
+	if err := godotenv.Load(); err != nil {
+		return Config{}, fmt.Errorf("Failed to load .env")
+	}
