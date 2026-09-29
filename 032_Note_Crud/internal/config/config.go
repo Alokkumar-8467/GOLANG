@@ -33,6 +33,12 @@ func Load() (Config, error) {
 		return Config{}, err
 	}
 
+	return Config{
+		MongoURI:   mongoURI,
+		MongoDB:    mongoDB,
+		ServerPort: port,
+	}, nil
 
+}
 
 	
