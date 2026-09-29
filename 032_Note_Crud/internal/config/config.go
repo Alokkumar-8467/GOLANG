@@ -20,3 +20,7 @@ func Load() (Config, error) {
 	if err := godotenv.Load(); err != nil {
 		return Config{}, fmt.Errorf("Failed to load .env")
 	}
+	mongoURI, err := extractEnv("MONGO_URI")
+	if err != nil {
+		return Config{}, err
+	}
