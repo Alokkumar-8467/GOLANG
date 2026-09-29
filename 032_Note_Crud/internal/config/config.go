@@ -11,7 +11,7 @@ type Config struct {
 	MongoURI   string
 	MongoDB    string
 	ServerPort string
-}
+} 
 
 func Load() (Config, error) {
 
