@@ -45,4 +45,11 @@ func extractEnv(key string) (string, error) {
 	val := os.Getenv(key)
 
 
-	
+		if val == "" {
+		return "", fmt.Errorf("missing req env")
+	}
+
+	return val, nil
+
+}
+
