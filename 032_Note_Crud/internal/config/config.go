@@ -24,3 +24,7 @@ func Load() (Config, error) {
 	if err != nil {
 		return Config{}, err
 	}
+	mongoDB, err := extractEnv("MONGO_DB_NAME")
+	if err != nil {
+		return Config{}, err
+	}
