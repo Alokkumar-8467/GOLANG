@@ -41,4 +41,8 @@ func Load() (Config, error) {
 
 }
 
+func extractEnv(key string) (string, error) {
+	val := os.Getenv(key)
+
+
 	
