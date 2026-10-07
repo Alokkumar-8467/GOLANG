@@ -20,3 +20,5 @@ The * means these are pointers, so the function hands back a reference to the cl
 When you call it, you receive all three:
 
 */
+
+func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
