@@ -23,3 +23,6 @@ When you call it, you receive all three:
 
 func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 	// Prevent Our app from freezing in startup
+	/*
+		ctx holds the 10-second countdown (the deadline). You pass it to operations like mongo.Connect(ctx, ...) and client.Ping(ctx, nil). If 10 seconds pass first, they stop and return a context deadline exceeded error.
+	*/
