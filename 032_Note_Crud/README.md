@@ -5,3 +5,6 @@ go mod init notes_api
 <!-- To install some package in Go Project Similar lile we install in Node like npm i and package name  -->
 
 
+go get github.com/gin-gonic/gin@latest
+
+<!-- Then ENV code -->
