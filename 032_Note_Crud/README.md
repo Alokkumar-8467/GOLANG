@@ -8,3 +8,6 @@ go mod init notes_api
 go get github.com/gin-gonic/gin@latest
 
 <!-- Then ENV code -->
+MONGO_URI=mongodb+srv://alokkumarcse01_db_user:9IUhje69bKP91u1h@cluster0.kltgpx0.mongodb.net/
+MONGO_DB_NAME=notes_db
+PORT=8080
