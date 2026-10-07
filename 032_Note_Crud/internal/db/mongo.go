@@ -26,3 +26,6 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 	/*
 		ctx holds the 10-second countdown (the deadline). You pass it to operations like mongo.Connect(ctx, ...) and client.Ping(ctx, nil). If 10 seconds pass first, they stop and return a context deadline exceeded error.
 	*/
+	/*
+		cancel is not a value and does not record whether the connection failed. It is a function. Calling it stops the countdown early and releases the timer's resources. That's what defer cancel() does when your function exits.
+	*/
