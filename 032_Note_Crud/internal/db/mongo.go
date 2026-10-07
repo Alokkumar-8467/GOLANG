@@ -15,3 +15,8 @@ The return values are the three things you listed:
 *mongo.Client is the connection to the MongoDB server
 *mongo.Database is the specific database you'll work in
 error is nil if everything worked, or the problem if it didn't
+The * means these are pointers, so the function hands back a reference to the client and database objects instead of copies. You use them the same way either way.
+
+When you call it, you receive all three:
+
+*/
