@@ -30,3 +30,5 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 		cancel is not a value and does not record whether the connection failed. It is a function. Calling it stops the countdown early and releases the timer's resources. That's what defer cancel() does when your function exits.
 	*/
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+}
