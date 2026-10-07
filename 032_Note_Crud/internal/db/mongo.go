@@ -22,3 +22,4 @@ When you call it, you receive all three:
 */
 
 func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
+	// Prevent Our app from freezing in startup
