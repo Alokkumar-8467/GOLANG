@@ -25,3 +25,5 @@ func main() {
 			log.Printf("mongo disconnect error: %v", err)
 		}
 	}()
+	router := server.NewRouter()
+	addr := fmt.Sprintf(":%s", cfg.ServerPort)
