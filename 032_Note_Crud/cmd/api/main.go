@@ -14,3 +14,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("Config error")
 	}
+	// Now DB connection
+
+	client, _, err := db.Connect(cfg)
+	if err != nil {
+		log.Fatalf("Config error")
+	}
