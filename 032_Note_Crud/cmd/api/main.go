@@ -27,3 +27,7 @@ func main() {
 	}()
 	router := server.NewRouter()
 	addr := fmt.Sprintf(":%s", cfg.ServerPort)
+	if err := router.Run(addr); err != nil {
+		log.Fatalf("Server failed")
+	}
+}
