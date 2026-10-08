@@ -59,7 +59,11 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 	database := client.Database(cfg.MongoDB)
 
 		return client, database, nil
-	
+
+	/*
+Summary for this Connect() function
+
+Connect() is a function that takes a config and promises to return a client, a database handle, and an error. First I create a ctx with a 10-second timeout, so Connect and Ping give up with an error if they take too long. Then I build clientOpts, which holds the settings parsed from cfg.MongoURI. I pass those to mongo.Connect to create the client, and check for an error.
 
 	
 }
