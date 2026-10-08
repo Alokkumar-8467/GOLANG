@@ -44,7 +44,10 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 
 	// Here we creata cleint variable that stores the clientOpts inside this variable.
 	// And in error we do the same approach.
-	
+		client, err := mongo.Connect(ctx, clientOpts)
+	if err != nil {
+		return nil, nil, fmt.Errorf("mongo connection failed.")
+	}
 	
 	
 }
