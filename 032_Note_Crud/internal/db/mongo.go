@@ -41,5 +41,10 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 
 	//clientOpts === It contains settings for creating a client, and the MongoURI
 	clientOpts := options.Client().ApplyURI(cfg.MongoURI)
+
+	// Here we creata cleint variable that stores the clientOpts inside this variable.
+	// And in error we do the same approach.
+	
+	
 	
 }
