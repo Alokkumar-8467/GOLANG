@@ -73,7 +73,7 @@ Connect() is a function that takes a config and promises to return a client, a d
 // Now DisCoonnect Fucntion
 
 func Disconnect(clinet *mongo.Client) error {
-
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 
 
 
