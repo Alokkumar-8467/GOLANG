@@ -54,6 +54,8 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 	if err != nil {
 		return nil, nil, fmt.Errorf("mongo ping failed")
 	}
-	
+		// client.Database(...) creates the handle, and cfg.MongoDB only supplies the name for it.
+	// And in database variable we store the created handler.
+	database := client.Database(cfg.MongoDB)
 	
 }
