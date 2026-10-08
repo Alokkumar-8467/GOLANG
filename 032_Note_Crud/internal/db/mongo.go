@@ -36,4 +36,10 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 	*/
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
+
+		// Now apply all of our Configs()
+
+	//clientOpts === It contains settings for creating a client, and the MongoURI
+	clientOpts := options.Client().ApplyURI(cfg.MongoURI)
+	
 }
