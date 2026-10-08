@@ -48,6 +48,12 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 	if err != nil {
 		return nil, nil, fmt.Errorf("mongo connection failed.")
 	}
+
+		// A ping is a tiny "are you there?" message you send to a server to check that it's alive and responding.
+	err = client.Ping(ctx, nil)
+	if err != nil {
+		return nil, nil, fmt.Errorf("mongo ping failed")
+	}
 	
 	
 }
