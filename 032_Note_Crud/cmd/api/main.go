@@ -20,3 +20,8 @@ func main() {
 	if err != nil {
 		log.Fatalf("Config error")
 	}
+	defer func() {
+		if err := db.Disconnect(client); err != nil {
+			log.Printf("mongo disconnect error: %v", err)
+		}
+	}()
