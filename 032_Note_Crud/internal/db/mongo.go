@@ -75,6 +75,11 @@ Connect() is a function that takes a config and promises to return a client, a d
 func Disconnect(clinet *mongo.Client) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 
+	defer cancel()
+
+	return clinet.Disconnect(ctx)
+
+}
 
 
 
