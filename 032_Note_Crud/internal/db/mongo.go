@@ -57,5 +57,9 @@ func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
 		// client.Database(...) creates the handle, and cfg.MongoDB only supplies the name for it.
 	// And in database variable we store the created handler.
 	database := client.Database(cfg.MongoDB)
+
+		return client, database, nil
+	
+
 	
 }
