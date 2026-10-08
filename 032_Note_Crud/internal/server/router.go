@@ -13,3 +13,5 @@ func NewRouter() *gin.Engine {
 			"status": "healthy",
 		})
 	})
+	return r
+}
