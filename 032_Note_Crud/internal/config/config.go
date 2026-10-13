@@ -18,7 +18,7 @@ func Load() (Config, error) {
 
 	// Imp
 	// godotenv.Load() reads .env and set them into the process env
-	// os.getenv -> reads those values
+	// godotenv.Load() reads the .env file and puts each line into the process’s environment variables (memory that belongs to your running program).
 
 	if err := godotenv.Load(); err != nil {
 		return Config{}, fmt.Errorf("Failed to load .env values")
@@ -46,6 +46,7 @@ func Load() (Config, error) {
 }
 
 func extractEnv(key string) (string, error) {
+	// os.getenv -> reads those values
 	val := os.Getenv(key)
 
 	if val == "" {
