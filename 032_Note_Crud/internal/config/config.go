@@ -24,12 +24,13 @@ func Load() (Config, error) {
 		return Config{}, fmt.Errorf("Failed to load .env values")
 	}
 
+	// mongoURI holds the value stored under that name in .env.
 	mongoURI, err := extractEnv("MONGO_URI")
 	if err != nil {
 		return Config{}, err
 	}
 
-	mongoDB, err := extractEnv("MONGO_DB")
+	mongoDB, err := extractEnv("MONGO_DB_NAME")
 	if err != nil {
 		return Config{}, err
 	}
