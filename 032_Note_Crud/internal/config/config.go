@@ -57,4 +57,3 @@ func extractEnv(key string) (string, error) {
 	return val, nil
 
 }
-
