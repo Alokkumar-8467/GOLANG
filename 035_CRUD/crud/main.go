@@ -22,6 +22,7 @@ func main() {
 
 	defer res.Body.Close()
 	defer resp.Body.Close()
+	defer resp2.Body.Close()
 
 	// We can also check the status code and status message of the response to see if the request was successful or not. The status code is a three-digit number that indicates the outcome of the request, while the status message is a brief description of the status code.
 
