@@ -72,3 +72,14 @@ func performPostRequest() {
 	// 1. Response
 	// 2. Error
 
+		myURL := "http://jsonplaceholder.typicode.com/todos"
+
+	resp, err := http.Post(myURL, "application/json", jsonReader)
+	if err != nil {
+		fmt.Println("Error in POST request: ", err)
+		return
+	}
+
+	defer resp.Body.Close()
+
+
