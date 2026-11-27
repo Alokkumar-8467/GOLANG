@@ -42,6 +42,17 @@ func main() {
 	fmt.Println("Status code", resp.StatusCode)
 	fmt.Println("Status code", resp.Status)
 
+		// **************
+	// Advanced method to get data from URL
+	var todo Todo
+	err = json.NewDecoder(resp2.Body).Decode(&todo)
+	if err != nil {
+		fmt.Println("Error decoding JSON: ", err)
+		return
+	}
+
+	fmt.Println("Decoded Todo: ", todo)
+
 }
 
 /* Output
