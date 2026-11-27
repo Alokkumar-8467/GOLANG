@@ -100,3 +100,14 @@ func performPostRequest() {
 	fmt.Println("Response: ", string(data))
 	fmt.Println("Response status", resp.Status)
 }
+
+func main() {
+	performGetRequest()
+	performPostRequest()
+}
+
+/*
+http.StatusOK	== 200	Request succeeded; no new resource was created.
+http.StatusCreated ==	201	Request succeeded; a new resource was created.
+*/
+
