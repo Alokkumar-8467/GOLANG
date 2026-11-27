@@ -26,3 +26,15 @@ func main() {
 		fmt.Println("Error in getting response: ", resp.Status)
 		return
 	}
+		data, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("Error reading response body: ", err)
+		return
+	}
+
+	fmt.Println("Data : ", string(data))
+
+	fmt.Println("Status code", resp.StatusCode)
+	fmt.Println("Status code", resp.Status)
+
+}
