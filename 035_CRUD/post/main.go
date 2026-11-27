@@ -83,3 +83,20 @@ func performPostRequest() {
 	defer resp.Body.Close()
 
 
+
+		defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusCreated {
+		fmt.Println("Error in getting response StatusCode Error: ", resp.Status)
+		return
+	}
+
+	data, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("Error reading response body: ", err)
+		return
+	}
+
+	fmt.Println("Response: ", string(data))
+	fmt.Println("Response status", resp.Status)
+}
