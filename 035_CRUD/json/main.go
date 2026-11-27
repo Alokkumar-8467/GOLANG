@@ -17,3 +17,14 @@ func main() {
 		Age:     30,
 		IsAdult: true,
 	}
+	fmt.Println("Direct Structure Data", person)
+
+	// Convert person JSON Encoding (Marshal)
+	// Means converting struct into JSON data
+
+	jsonData, err := json.Marshal(person)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+
+	}
