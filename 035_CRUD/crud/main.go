@@ -9,9 +9,11 @@ import (
 func main() {
 	url := "http://jsonplaceholder.typicode.com/todos"
 	url1 := "http://jsonplaceholder.typicode.com/todos/1"
+	url2 := "http://jsonplaceholder.typicode.com/todos/1"
 
 	res, err := http.Get(url)
 	resp, err := http.Get(url1)
+	resp2, err := http.Get(url2)
 
 	if err != nil {
 		fmt.Println("Error getting : ", err)
