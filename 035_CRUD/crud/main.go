@@ -53,6 +53,15 @@ func main() {
 
 	fmt.Println("Decoded Todo: ", todo)
 
+	// **************
+	// We can not write string(todo) because todo is a struct and we can not convert struct into string directly. We need to convert it into JSON bytes first and then we can convert it into string.
+
+	todoBytes, err := json.Marshal(todo)
+	if err != nil {
+		fmt.Println("Error marshaling JSON: ", err)
+		return
+	}
+	fmt.Println("Decoded Todo: ", string(todoBytes))
 }
 
 /* Output
