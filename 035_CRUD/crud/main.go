@@ -1,10 +1,18 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 )
+
+type Todo struct {
+	UserID    int    `json:"userId"`
+	ID        int    `json:"id"`
+	Title     string `json:"title"`
+	Completed bool   `json:"completed"`
+}
 
 func main() {
 	url := "http://jsonplaceholder.typicode.com/todos"
@@ -31,6 +39,8 @@ func main() {
 		return
 	}
 
+	// **************
+	// Basic method to get data from URL
 	data, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println("Error reading response body: ", err)
@@ -42,7 +52,7 @@ func main() {
 	fmt.Println("Status code", resp.StatusCode)
 	fmt.Println("Status code", resp.Status)
 
-		// **************
+	// **************
 	// Advanced method to get data from URL
 	var todo Todo
 	err = json.NewDecoder(resp2.Body).Decode(&todo)
