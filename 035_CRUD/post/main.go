@@ -23,3 +23,19 @@ func performGetRequest() {
 		fmt.Println("Error getting : ", err)
 		return
 	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		fmt.Println("Error in getting response: ", resp.Status)
+		return
+	}
+	// **************
+	// Advanced method to get data from URL
+	var todo Todo
+	err = json.NewDecoder(resp.Body).Decode(&todo)
+	if err != nil {
+		fmt.Println("Error decoding JSON: ", err)
+		return
+	}
+	fmt.Println("Decoded Todo: ", todo)
+}
