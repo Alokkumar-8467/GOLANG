@@ -17,6 +17,7 @@ func main() {
 		fmt.Println("Error getting : ", err)
 		return
 	}
+
 	defer res.Body.Close()
 	defer resp.Body.Close()
 
@@ -26,7 +27,8 @@ func main() {
 		fmt.Println("Error in getting response: ", resp.Status)
 		return
 	}
-		data, err := ioutil.ReadAll(resp.Body)
+
+	data, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println("Error reading response body: ", err)
 		return
