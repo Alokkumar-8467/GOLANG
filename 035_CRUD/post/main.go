@@ -39,3 +39,19 @@ func performGetRequest() {
 	}
 	fmt.Println("Decoded Todo: ", todo)
 }
+
+func performPostRequest() {
+	todo := Todo{
+		UserID:    22,
+		Title:     "New Todo",
+		Completed: true,
+	}
+
+	// Now want to send this todo to the server using POST request. We need to convert this todo struct into JSON bytes first and then we can send it to the server.
+	// Because the server expects the request body to be in JSON format. So we need to convert this todo struct into JSON bytes first and then we can send it to the server.
+	// So we use json.Marshal function to convert this todo struct into JSON bytes.
+	jsonData, err := json.Marshal(todo)
+	if err != nil {
+		fmt.Println("Error in converting Struct Data to JSON", err)
+		return
+	}
