@@ -55,3 +55,20 @@ func performPostRequest() {
 		fmt.Println("Error in converting Struct Data to JSON", err)
 		return
 	}
+
+		fmt.Println("JSON Data after conversion from struct to JSON : ", string(jsonData))
+	jsonString := string(jsonData)
+
+	// Now for HTTP.POST we need to convert the string data to reader
+	jsonReader := strings.NewReader(jsonString)
+
+	// Now HTTP POST
+	// It required three parameters
+	// 1. URL
+	// 2. Content-Type
+	// 3. Request Body
+	// So we can use http.Post() function to send this JSON data to the server using POST request.
+	// The http.Post() function returns two values
+	// 1. Response
+	// 2. Error
+
