@@ -14,6 +14,7 @@ type Todo struct {
 	Title     string `json:"title"`
 	Completed bool   `json:"completed"`
 }
+
 func performGetRequest() {
 	url := "http://jsonplaceholder.typicode.com/todos/1"
 
@@ -23,6 +24,7 @@ func performGetRequest() {
 		fmt.Println("Error getting : ", err)
 		return
 	}
+
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
@@ -55,8 +57,7 @@ func performPostRequest() {
 		fmt.Println("Error in converting Struct Data to JSON", err)
 		return
 	}
-
-		fmt.Println("JSON Data after conversion from struct to JSON : ", string(jsonData))
+	fmt.Println("JSON Data after conversion from struct to JSON : ", string(jsonData))
 	jsonString := string(jsonData)
 
 	// Now for HTTP.POST we need to convert the string data to reader
@@ -72,7 +73,7 @@ func performPostRequest() {
 	// 1. Response
 	// 2. Error
 
-		myURL := "http://jsonplaceholder.typicode.com/todos"
+	myURL := "http://jsonplaceholder.typicode.com/todos"
 
 	resp, err := http.Post(myURL, "application/json", jsonReader)
 	if err != nil {
@@ -81,10 +82,6 @@ func performPostRequest() {
 	}
 
 	defer resp.Body.Close()
-
-
-
-		defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusCreated {
 		fmt.Println("Error in getting response StatusCode Error: ", resp.Status)
@@ -110,4 +107,3 @@ func main() {
 http.StatusOK	== 200	Request succeeded; no new resource was created.
 http.StatusCreated ==	201	Request succeeded; a new resource was created.
 */
-
